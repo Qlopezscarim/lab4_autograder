@@ -1,11 +1,11 @@
 # Real-Time DSP Lab 3 Autograder
 # William Davis 2/19/2024
 
-BASE_PATH = 'fir1'
-MAX_DSP = 50
-MAX_FF = 99999
-MAX_LUT = 99999
-MAX_LATENCY = 187
+BASE_PATH = 'fir3'
+MAX_DSP = 0
+MAX_FF = 520
+MAX_LUT = 3500
+MAX_LATENCY = 105
 
 ####################
 import sys
