@@ -1,0 +1,37 @@
+{
+  "0": {
+    "basicblocks": 21,
+    "calls": "",
+    "file": "fir.cpp",
+    "fileloc": 5,
+    "instructions": 84,
+    "loads": {
+      "L": 2,
+      "T": 1
+    },
+    "name": "fir",
+    "stores": {
+      "L": 2,
+      "T": 1
+    },
+    "total_instructions": 848
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "2",
+    "file": "fir.pp.0.cpp",
+    "fileloc": 0,
+    "instructions": 2,
+    "name": "",
+    "total_instructions": 3873
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "fir.cpp",
+    "fileloc": 3,
+    "instructions": 11,
+    "name": "__cxx_global_var_init",
+    "total_instructions": 3871
+  }
+}

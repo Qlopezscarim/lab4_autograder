@@ -1,0 +1,473 @@
+================================================================
+== Vivado Place & Route Results
+================================================================
++ General Information:
+    * Date:            Thu Feb 13 20:41:03 EST 2025
+    * Version:         2024.2 (Build 5238294 on Nov  8 2024)
+    * Project:         fir3
+    * Solution:        hls (Vitis Kernel Flow Target)
+    * Product family:  zynquplusRFSOC
+    * Target device:   xczu48dr-ffvg1517-2-e
+
+
+================================================================
+== Run Constraints & Options
+================================================================
++ Design Constraints & Options:
+    * Place & Route target clock:  5 ns
+    * C-Synthesis target clock:    5 ns
+    * C-Synthesis uncertainty:     27%
+
++ RTL Synthesis Options:
+    * config_export -vivado_synth_strategy:     default
+    * config_export -vivado_synth_design_args:  -directive sdx_optimization_effort_high
+
++ Place & Route Options:
+    * config_export -vivado_impl_strategy:  default
+    * config_export -vivado_phys_opt:       auto
+
++ Reporting Options:
+    * config_export -vivado_report_level:      2
+    * config_export -vivado_max_timing_paths:  10
+
+
+================================================================
+== Place & Route Resource Summary
+================================================================
+LUT:              1305
+FF:               667
+DSP:              0
+BRAM:             0
+URAM:             0
+SRL:              0
+
+
+================================================================
+== Place & Route Timing Summary
+================================================================
+* Timing was met
++----------------+-------------+
+| Timing         | Period (ns) |
++----------------+-------------+
+| Target         | 5.000       |
+| Post-Synthesis | 2.470       |
+| Post-Route     | 2.977       |
++----------------+-------------+
+
+
+================================================================
+== Place & Route Resources
+================================================================
++----------------------------------+------+-----+-----+------+------+-----+--------+------+---------+----------+--------+
+| Name                             | LUT  | FF  | DSP | BRAM | URAM | SRL | Pragma | Impl | Latency | Variable | Source |
++----------------------------------+------+-----+-----+------+------+-----+--------+------+---------+----------+--------+
+| inst                             | 1305 | 667 |     |      |      |     |        |      |         |          |        |
+|   (inst)                         | 1    | 389 |     |      |      |     |        |      |         |          |        |
+|   control_s_axi_U                | 29   | 30  |     |      |      |     |        |      |         |          |        |
+|   flow_control_loop_delay_pipe_U | 179  | 4   |     |      |      |     |        |      |         |          |        |
+|   mul_17s_12ns_29_2_1_U4         | 77   | 16  |     |      |      |     |        |      |         |          |        |
+|   mul_17s_13ns_30_2_1_U8         | 83   | 17  |     |      |      |     |        |      |         |          |        |
+|   mul_17s_13s_30_2_1_U9          | 107  | 17  |     |      |      |     |        |      |         |          |        |
+|   mul_17s_14ns_31_2_1_U7         | 115  | 18  |     |      |      |     |        |      |         |          |        |
+|   mul_17s_14s_31_2_1_U3          | 151  | 18  |     |      |      |     |        |      |         |          |        |
+|   mul_17s_15ns_32_2_1_U2         | 95   | 19  |     |      |      |     |        |      |         |          |        |
+|   mul_17s_15ns_32_2_1_U5         | 103  | 19  |     |      |      |     |        |      |         |          |        |
+|   mul_17s_15s_32_2_1_U1          | 87   | 19  |     |      |      |     |        |      |         |          |        |
+|   mul_17s_15s_32_2_1_U6          | 173  | 19  |     |      |      |     |        |      |         |          |        |
+|   regslice_both_in_r_U           | 22   | 39  |     |      |      |     |        |      |         |          |        |
+|   regslice_both_out_r_U          | 96   | 43  |     |      |      |     |        |      |         |          |        |
++----------------------------------+------+-----+-----+------+------+-----+--------+------+---------+----------+--------+
+
+
+================================================================
+== Place & Route Fail Fast
+================================================================
++-----------------------------------------------------------+-----------+--------+--------+
+| Criteria                                                  | Guideline | Actual | Status |
++-----------------------------------------------------------+-----------+--------+--------+
+| LUT                                                       | 70%       | 0.31%  | OK     |
+| FD                                                        | 50%       | 0.08%  | OK     |
+| LUTRAM+SRL                                                | 25%       | 0.00%  | OK     |
+| CARRY8                                                    | 25%       | 0.35%  | OK     |
+| MUXF7                                                     | 15%       | 0.00%  | OK     |
+| DSP                                                       | 80%       | 0.00%  | OK     |
+| RAMB/FIFO                                                 | 80%       | 0.00%  | OK     |
+| URAM                                                      | 80%       | 0.00%  | OK     |
+| DSP+RAMB+URAM (Avg)                                       | 70%       | 0.00%  | OK     |
+| BUFGCE* + BUFGCTRL                                        | 24        | 0      | OK     |
+| DONT_TOUCH (cells/nets)                                   | 0         | 0      | OK     |
+| MARK_DEBUG (nets)                                         | 0         | 0      | OK     |
+| Control Sets                                              | 7974      | 18     | OK     |
+| Average Fanout for modules > 100k cells                   | 4         | 2.67   | OK     |
+| Max Average Fanout for modules > 100k cells               | 4         | 0      | OK     |
+| Non-FD high fanout nets > 10k loads                       | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| TIMING-6 (No common primary clock between related clocks) | 0         | 0      | OK     |
+| TIMING-7 (No common node between related clocks)          | 0         | 0      | OK     |
+| TIMING-8 (No common period between related clocks)        | 0         | 0      | OK     |
+| TIMING-14 (LUT on the clock tree)                         | 0         | 0      | OK     |
+| TIMING-35 (No common node in paths with the same clock)   | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| Number of paths above max LUT budgeting (0.300ns)         | 0         | 0      | OK     |
+| Number of paths above max Net budgeting (0.208ns)         | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+
+
+================================================================
+== Place & Route Timing Paths
+================================================================
+* Timing was met
++-------+-------+-------------------------+----------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path  | SLACK | STARTPOINT PIN          | ENDPOINT PIN                           | LOGIC LEVELS | MAX FANOUT | DATAPATH DELAY | DATAPATH LOGIC | DATAPATH NET |
+|       |       |                         |                                        |              |            |                |          DELAY |        DELAY |
++-------+-------+-------------------------+----------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path1 | 2.023 | reg_1_fu_128_reg[5]/C   | mul_17s_14ns_31_2_1_U7/buff0_reg[29]/D |           10 |         18 |          2.956 |          1.317 |        1.639 |
+| Path2 | 2.035 | reg_14_reg_747_reg[3]/C | mul_17s_15s_32_2_1_U6/buff0_reg[31]/D  |           10 |         24 |          2.944 |          1.329 |        1.615 |
+| Path3 | 2.035 | reg_1_fu_128_reg[5]/C   | mul_17s_14ns_31_2_1_U7/buff0_reg[30]/D |           10 |         18 |          2.944 |          1.304 |        1.640 |
+| Path4 | 2.036 | reg_14_reg_747_reg[3]/C | mul_17s_15s_32_2_1_U6/buff0_reg[29]/D  |           10 |         24 |          2.943 |          1.329 |        1.614 |
+| Path5 | 2.048 | reg_14_reg_747_reg[3]/C | mul_17s_15s_32_2_1_U6/buff0_reg[30]/D  |           10 |         24 |          2.931 |          1.316 |        1.615 |
++-------+-------+-------------------------+----------------------------------------+--------------+------------+----------------+----------------+--------------+
+
+    +-------------------------------------------+-------------------+
+    | Path1 Cells                               | Primitive Type    |
+    +-------------------------------------------+-------------------+
+    | reg_1_fu_128_reg[5]                       | REGISTER.SDR.FDRE |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[15]_i_20 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[23]_i_43 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0[15]_i_25     | CLB.LUT.LUT2      |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[15]_i_21 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[23]_i_23 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0[23]_i_27__0  | CLB.LUT.LUT3      |
+    | mul_17s_14ns_31_2_1_U7/buff0[23]_i_8__0   | CLB.LUT.LUT5      |
+    | mul_17s_14ns_31_2_1_U7/buff0[23]_i_16     | CLB.LUT.LUT6      |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[23]_i_1  | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[30]_i_1  | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[29]      | REGISTER.SDR.FDRE |
+    | reg_14_reg_747_reg[3]                     | REGISTER.SDR.FDRE |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_96      | CLB.LUT.LUT3      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_72  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_46  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_55      | CLB.LUT.LUT2      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_23  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_28      | CLB.LUT.LUT3      |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_9       | CLB.LUT.LUT5      |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_17      | CLB.LUT.LUT6      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_1   | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[31]_i_1   | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[31]       | REGISTER.SDR.FDRE |
+    | reg_1_fu_128_reg[5]                       | REGISTER.SDR.FDRE |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[15]_i_20 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[23]_i_43 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0[15]_i_25     | CLB.LUT.LUT2      |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[15]_i_21 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[23]_i_23 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0[23]_i_27__0  | CLB.LUT.LUT3      |
+    | mul_17s_14ns_31_2_1_U7/buff0[23]_i_8__0   | CLB.LUT.LUT5      |
+    | mul_17s_14ns_31_2_1_U7/buff0[23]_i_16     | CLB.LUT.LUT6      |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[23]_i_1  | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[30]_i_1  | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[30]      | REGISTER.SDR.FDRE |
+    | reg_14_reg_747_reg[3]                     | REGISTER.SDR.FDRE |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_96      | CLB.LUT.LUT3      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_72  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_46  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_55      | CLB.LUT.LUT2      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_23  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_28      | CLB.LUT.LUT3      |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_9       | CLB.LUT.LUT5      |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_17      | CLB.LUT.LUT6      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_1   | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[31]_i_1   | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[29]       | REGISTER.SDR.FDRE |
+    | reg_14_reg_747_reg[3]                     | REGISTER.SDR.FDRE |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_96      | CLB.LUT.LUT3      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_72  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_46  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_55      | CLB.LUT.LUT2      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_23  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_28      | CLB.LUT.LUT3      |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_9       | CLB.LUT.LUT5      |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_17      | CLB.LUT.LUT6      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_1   | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[31]_i_1   | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[30]       | REGISTER.SDR.FDRE |
+    +-------------------------------------------+-------------------+
+
+    +-------------------------------------------+-------------------+
+    | Path2 Cells                               | Primitive Type    |
+    +-------------------------------------------+-------------------+
+    | reg_1_fu_128_reg[5]                       | REGISTER.SDR.FDRE |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[15]_i_20 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[23]_i_43 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0[15]_i_25     | CLB.LUT.LUT2      |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[15]_i_21 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[23]_i_23 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0[23]_i_27__0  | CLB.LUT.LUT3      |
+    | mul_17s_14ns_31_2_1_U7/buff0[23]_i_8__0   | CLB.LUT.LUT5      |
+    | mul_17s_14ns_31_2_1_U7/buff0[23]_i_16     | CLB.LUT.LUT6      |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[23]_i_1  | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[30]_i_1  | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[29]      | REGISTER.SDR.FDRE |
+    | reg_14_reg_747_reg[3]                     | REGISTER.SDR.FDRE |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_96      | CLB.LUT.LUT3      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_72  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_46  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_55      | CLB.LUT.LUT2      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_23  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_28      | CLB.LUT.LUT3      |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_9       | CLB.LUT.LUT5      |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_17      | CLB.LUT.LUT6      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_1   | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[31]_i_1   | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[31]       | REGISTER.SDR.FDRE |
+    | reg_1_fu_128_reg[5]                       | REGISTER.SDR.FDRE |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[15]_i_20 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[23]_i_43 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0[15]_i_25     | CLB.LUT.LUT2      |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[15]_i_21 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[23]_i_23 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0[23]_i_27__0  | CLB.LUT.LUT3      |
+    | mul_17s_14ns_31_2_1_U7/buff0[23]_i_8__0   | CLB.LUT.LUT5      |
+    | mul_17s_14ns_31_2_1_U7/buff0[23]_i_16     | CLB.LUT.LUT6      |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[23]_i_1  | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[30]_i_1  | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[30]      | REGISTER.SDR.FDRE |
+    | reg_14_reg_747_reg[3]                     | REGISTER.SDR.FDRE |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_96      | CLB.LUT.LUT3      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_72  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_46  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_55      | CLB.LUT.LUT2      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_23  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_28      | CLB.LUT.LUT3      |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_9       | CLB.LUT.LUT5      |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_17      | CLB.LUT.LUT6      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_1   | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[31]_i_1   | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[29]       | REGISTER.SDR.FDRE |
+    | reg_14_reg_747_reg[3]                     | REGISTER.SDR.FDRE |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_96      | CLB.LUT.LUT3      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_72  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_46  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_55      | CLB.LUT.LUT2      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_23  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_28      | CLB.LUT.LUT3      |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_9       | CLB.LUT.LUT5      |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_17      | CLB.LUT.LUT6      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_1   | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[31]_i_1   | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[30]       | REGISTER.SDR.FDRE |
+    +-------------------------------------------+-------------------+
+
+    +-------------------------------------------+-------------------+
+    | Path3 Cells                               | Primitive Type    |
+    +-------------------------------------------+-------------------+
+    | reg_1_fu_128_reg[5]                       | REGISTER.SDR.FDRE |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[15]_i_20 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[23]_i_43 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0[15]_i_25     | CLB.LUT.LUT2      |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[15]_i_21 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[23]_i_23 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0[23]_i_27__0  | CLB.LUT.LUT3      |
+    | mul_17s_14ns_31_2_1_U7/buff0[23]_i_8__0   | CLB.LUT.LUT5      |
+    | mul_17s_14ns_31_2_1_U7/buff0[23]_i_16     | CLB.LUT.LUT6      |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[23]_i_1  | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[30]_i_1  | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[29]      | REGISTER.SDR.FDRE |
+    | reg_14_reg_747_reg[3]                     | REGISTER.SDR.FDRE |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_96      | CLB.LUT.LUT3      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_72  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_46  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_55      | CLB.LUT.LUT2      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_23  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_28      | CLB.LUT.LUT3      |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_9       | CLB.LUT.LUT5      |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_17      | CLB.LUT.LUT6      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_1   | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[31]_i_1   | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[31]       | REGISTER.SDR.FDRE |
+    | reg_1_fu_128_reg[5]                       | REGISTER.SDR.FDRE |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[15]_i_20 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[23]_i_43 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0[15]_i_25     | CLB.LUT.LUT2      |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[15]_i_21 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[23]_i_23 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0[23]_i_27__0  | CLB.LUT.LUT3      |
+    | mul_17s_14ns_31_2_1_U7/buff0[23]_i_8__0   | CLB.LUT.LUT5      |
+    | mul_17s_14ns_31_2_1_U7/buff0[23]_i_16     | CLB.LUT.LUT6      |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[23]_i_1  | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[30]_i_1  | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[30]      | REGISTER.SDR.FDRE |
+    | reg_14_reg_747_reg[3]                     | REGISTER.SDR.FDRE |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_96      | CLB.LUT.LUT3      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_72  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_46  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_55      | CLB.LUT.LUT2      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_23  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_28      | CLB.LUT.LUT3      |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_9       | CLB.LUT.LUT5      |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_17      | CLB.LUT.LUT6      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_1   | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[31]_i_1   | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[29]       | REGISTER.SDR.FDRE |
+    | reg_14_reg_747_reg[3]                     | REGISTER.SDR.FDRE |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_96      | CLB.LUT.LUT3      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_72  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_46  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_55      | CLB.LUT.LUT2      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_23  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_28      | CLB.LUT.LUT3      |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_9       | CLB.LUT.LUT5      |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_17      | CLB.LUT.LUT6      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_1   | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[31]_i_1   | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[30]       | REGISTER.SDR.FDRE |
+    +-------------------------------------------+-------------------+
+
+    +-------------------------------------------+-------------------+
+    | Path4 Cells                               | Primitive Type    |
+    +-------------------------------------------+-------------------+
+    | reg_1_fu_128_reg[5]                       | REGISTER.SDR.FDRE |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[15]_i_20 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[23]_i_43 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0[15]_i_25     | CLB.LUT.LUT2      |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[15]_i_21 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[23]_i_23 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0[23]_i_27__0  | CLB.LUT.LUT3      |
+    | mul_17s_14ns_31_2_1_U7/buff0[23]_i_8__0   | CLB.LUT.LUT5      |
+    | mul_17s_14ns_31_2_1_U7/buff0[23]_i_16     | CLB.LUT.LUT6      |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[23]_i_1  | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[30]_i_1  | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[29]      | REGISTER.SDR.FDRE |
+    | reg_14_reg_747_reg[3]                     | REGISTER.SDR.FDRE |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_96      | CLB.LUT.LUT3      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_72  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_46  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_55      | CLB.LUT.LUT2      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_23  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_28      | CLB.LUT.LUT3      |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_9       | CLB.LUT.LUT5      |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_17      | CLB.LUT.LUT6      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_1   | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[31]_i_1   | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[31]       | REGISTER.SDR.FDRE |
+    | reg_1_fu_128_reg[5]                       | REGISTER.SDR.FDRE |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[15]_i_20 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[23]_i_43 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0[15]_i_25     | CLB.LUT.LUT2      |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[15]_i_21 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[23]_i_23 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0[23]_i_27__0  | CLB.LUT.LUT3      |
+    | mul_17s_14ns_31_2_1_U7/buff0[23]_i_8__0   | CLB.LUT.LUT5      |
+    | mul_17s_14ns_31_2_1_U7/buff0[23]_i_16     | CLB.LUT.LUT6      |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[23]_i_1  | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[30]_i_1  | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[30]      | REGISTER.SDR.FDRE |
+    | reg_14_reg_747_reg[3]                     | REGISTER.SDR.FDRE |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_96      | CLB.LUT.LUT3      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_72  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_46  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_55      | CLB.LUT.LUT2      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_23  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_28      | CLB.LUT.LUT3      |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_9       | CLB.LUT.LUT5      |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_17      | CLB.LUT.LUT6      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_1   | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[31]_i_1   | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[29]       | REGISTER.SDR.FDRE |
+    | reg_14_reg_747_reg[3]                     | REGISTER.SDR.FDRE |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_96      | CLB.LUT.LUT3      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_72  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_46  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_55      | CLB.LUT.LUT2      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_23  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_28      | CLB.LUT.LUT3      |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_9       | CLB.LUT.LUT5      |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_17      | CLB.LUT.LUT6      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_1   | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[31]_i_1   | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[30]       | REGISTER.SDR.FDRE |
+    +-------------------------------------------+-------------------+
+
+    +-------------------------------------------+-------------------+
+    | Path5 Cells                               | Primitive Type    |
+    +-------------------------------------------+-------------------+
+    | reg_1_fu_128_reg[5]                       | REGISTER.SDR.FDRE |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[15]_i_20 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[23]_i_43 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0[15]_i_25     | CLB.LUT.LUT2      |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[15]_i_21 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[23]_i_23 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0[23]_i_27__0  | CLB.LUT.LUT3      |
+    | mul_17s_14ns_31_2_1_U7/buff0[23]_i_8__0   | CLB.LUT.LUT5      |
+    | mul_17s_14ns_31_2_1_U7/buff0[23]_i_16     | CLB.LUT.LUT6      |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[23]_i_1  | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[30]_i_1  | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[29]      | REGISTER.SDR.FDRE |
+    | reg_14_reg_747_reg[3]                     | REGISTER.SDR.FDRE |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_96      | CLB.LUT.LUT3      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_72  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_46  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_55      | CLB.LUT.LUT2      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_23  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_28      | CLB.LUT.LUT3      |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_9       | CLB.LUT.LUT5      |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_17      | CLB.LUT.LUT6      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_1   | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[31]_i_1   | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[31]       | REGISTER.SDR.FDRE |
+    | reg_1_fu_128_reg[5]                       | REGISTER.SDR.FDRE |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[15]_i_20 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[23]_i_43 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0[15]_i_25     | CLB.LUT.LUT2      |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[15]_i_21 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[23]_i_23 | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0[23]_i_27__0  | CLB.LUT.LUT3      |
+    | mul_17s_14ns_31_2_1_U7/buff0[23]_i_8__0   | CLB.LUT.LUT5      |
+    | mul_17s_14ns_31_2_1_U7/buff0[23]_i_16     | CLB.LUT.LUT6      |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[23]_i_1  | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[30]_i_1  | CLB.CARRY.CARRY8  |
+    | mul_17s_14ns_31_2_1_U7/buff0_reg[30]      | REGISTER.SDR.FDRE |
+    | reg_14_reg_747_reg[3]                     | REGISTER.SDR.FDRE |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_96      | CLB.LUT.LUT3      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_72  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_46  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_55      | CLB.LUT.LUT2      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_23  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_28      | CLB.LUT.LUT3      |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_9       | CLB.LUT.LUT5      |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_17      | CLB.LUT.LUT6      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_1   | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[31]_i_1   | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[29]       | REGISTER.SDR.FDRE |
+    | reg_14_reg_747_reg[3]                     | REGISTER.SDR.FDRE |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_96      | CLB.LUT.LUT3      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_72  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_46  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_55      | CLB.LUT.LUT2      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_23  | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_28      | CLB.LUT.LUT3      |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_9       | CLB.LUT.LUT5      |
+    | mul_17s_15s_32_2_1_U6/buff0[23]_i_17      | CLB.LUT.LUT6      |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[23]_i_1   | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[31]_i_1   | CLB.CARRY.CARRY8  |
+    | mul_17s_15s_32_2_1_U6/buff0_reg[30]       | REGISTER.SDR.FDRE |
+    +-------------------------------------------+-------------------+
+
+
+================================================================
+== Place & Route Vivado Reports
+================================================================
++--------------------------+-------------------------------------------------------------+
+| Report Type              | Report Location                                             |
++--------------------------+-------------------------------------------------------------+
+| design_analysis          | impl/verilog/report/fir_design_analysis_routed.rpt          |
+| failfast                 | impl/verilog/report/fir_failfast_routed.rpt                 |
+| power                    | impl/verilog/report/fir_power_routed.rpt                    |
+| status                   | impl/verilog/report/fir_status_routed.rpt                   |
+| timing                   | impl/verilog/report/fir_timing_routed.rpt                   |
+| timing_paths             | impl/verilog/report/fir_timing_paths_routed.rpt             |
+| utilization              | impl/verilog/report/fir_utilization_routed.rpt              |
+| utilization_hierarchical | impl/verilog/report/fir_utilization_hierarchical_routed.rpt |
++--------------------------+-------------------------------------------------------------+
+
+

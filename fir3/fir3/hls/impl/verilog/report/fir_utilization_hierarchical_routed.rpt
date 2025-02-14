@@ -1,0 +1,47 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Thu Feb 13 20:40:38 2025
+| Host         : ece-lnx-4511c running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
+| Command      : report_utilization -hierarchical -hierarchical_depth 5 -file ./report/fir_utilization_hierarchical_routed.rpt
+| Design       : bd_0_wrapper
+| Device       : xczu48dr-ffvg1517-2-e
+| Speed File   : -2
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++----------------------------------------+--------------------------------------------------+------------+------------+---------+------+-----+--------+--------+------+------------+
+|                Instance                |                      Module                      | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | URAM | DSP Blocks |
++----------------------------------------+--------------------------------------------------+------------+------------+---------+------+-----+--------+--------+------+------------+
+| bd_0_wrapper                           |                                            (top) |       1305 |       1305 |       0 |    0 | 667 |      0 |      0 |    0 |          0 |
+|   bd_0_i                               |                                             bd_0 |       1305 |       1305 |       0 |    0 | 667 |      0 |      0 |    0 |          0 |
+|     hls_inst                           |                                  bd_0_hls_inst_0 |       1305 |       1305 |       0 |    0 | 667 |      0 |      0 |    0 |          0 |
+|       (hls_inst)                       |                                  bd_0_hls_inst_0 |          0 |          0 |       0 |    0 |   0 |      0 |      0 |    0 |          0 |
+|       inst                             |                              bd_0_hls_inst_0_fir |       1305 |       1305 |       0 |    0 | 667 |      0 |      0 |    0 |          0 |
+|         (inst)                         |                              bd_0_hls_inst_0_fir |          1 |          1 |       0 |    0 | 389 |      0 |      0 |    0 |          0 |
+|         control_s_axi_U                |                bd_0_hls_inst_0_fir_control_s_axi |         29 |         29 |       0 |    0 |  30 |      0 |      0 |    0 |          0 |
+|         flow_control_loop_delay_pipe_U | bd_0_hls_inst_0_fir_flow_control_loop_delay_pipe |        179 |        179 |       0 |    0 |   4 |      0 |      0 |    0 |          0 |
+|         mul_17s_12ns_29_2_1_U4         |          bd_0_hls_inst_0_fir_mul_17s_12ns_29_2_1 |         77 |         77 |       0 |    0 |  16 |      0 |      0 |    0 |          0 |
+|         mul_17s_13ns_30_2_1_U8         |          bd_0_hls_inst_0_fir_mul_17s_13ns_30_2_1 |         83 |         83 |       0 |    0 |  17 |      0 |      0 |    0 |          0 |
+|         mul_17s_13s_30_2_1_U9          |           bd_0_hls_inst_0_fir_mul_17s_13s_30_2_1 |        107 |        107 |       0 |    0 |  17 |      0 |      0 |    0 |          0 |
+|         mul_17s_14ns_31_2_1_U7         |          bd_0_hls_inst_0_fir_mul_17s_14ns_31_2_1 |        115 |        115 |       0 |    0 |  18 |      0 |      0 |    0 |          0 |
+|         mul_17s_14s_31_2_1_U3          |           bd_0_hls_inst_0_fir_mul_17s_14s_31_2_1 |        151 |        151 |       0 |    0 |  18 |      0 |      0 |    0 |          0 |
+|         mul_17s_15ns_32_2_1_U2         |          bd_0_hls_inst_0_fir_mul_17s_15ns_32_2_1 |         95 |         95 |       0 |    0 |  19 |      0 |      0 |    0 |          0 |
+|         mul_17s_15ns_32_2_1_U5         |        bd_0_hls_inst_0_fir_mul_17s_15ns_32_2_1_0 |        103 |        103 |       0 |    0 |  19 |      0 |      0 |    0 |          0 |
+|         mul_17s_15s_32_2_1_U1          |           bd_0_hls_inst_0_fir_mul_17s_15s_32_2_1 |         87 |         87 |       0 |    0 |  19 |      0 |      0 |    0 |          0 |
+|         mul_17s_15s_32_2_1_U6          |         bd_0_hls_inst_0_fir_mul_17s_15s_32_2_1_1 |        173 |        173 |       0 |    0 |  19 |      0 |      0 |    0 |          0 |
+|         regslice_both_in_r_U           |                bd_0_hls_inst_0_fir_regslice_both |         22 |         22 |       0 |    0 |  39 |      0 |      0 |    0 |          0 |
+|         regslice_both_out_r_U          |              bd_0_hls_inst_0_fir_regslice_both_2 |         96 |         96 |       0 |    0 |  43 |      0 |      0 |    0 |          0 |
++----------------------------------------+--------------------------------------------------+------------+------------+---------+------+-----+--------+--------+------+------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+
