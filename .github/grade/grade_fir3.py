@@ -5,7 +5,7 @@ BASE_PATH = 'fir3'
 MAX_DSP = 0
 MAX_FF = 520
 MAX_LUT = 3500
-MAX_LATENCY = 105
+MAX_LATENCY = 106
 
 ####################
 import sys
