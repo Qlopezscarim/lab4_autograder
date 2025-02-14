@@ -39,10 +39,10 @@ def check_report_file():
     latency = int(columns[4])
     slack = float(columns[3])
 
-    print("DSP: " + dsp)
-    print("ff: " + ff)
-    print("lut: " + lut)
-    print("latency: " + latency)
+    print("DSP: " + str(dsp))
+    print("ff: " + str(ff))
+    print("lut: " + str(lut))
+    print("latency: " + str(latency))
 
 
     checks = {
