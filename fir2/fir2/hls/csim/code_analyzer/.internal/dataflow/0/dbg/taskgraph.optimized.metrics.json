@@ -1,0 +1,969 @@
+[
+    {
+        "name": "_Z3firP8ap_fixedILi17ELi2EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi19ELi3ELS0_5ELS1_3ELi0EE",
+        "df_function": "%F575",
+        "df_type": "Function",
+        "project": "SLX",
+        "processes": {
+            "1": {
+                "id": "1",
+                "name": "Artificial<Start>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                        "line": 5,
+                        "column": 1
+                    },
+                    "end_loc": {
+                        "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                        "line": 28,
+                        "column": 1
+                    }
+                },
+                "display_name": "<START>",
+                "kind": "start"
+            },
+            "2": {
+                "id": "2",
+                "name": "Artificial<End>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                        "line": 5,
+                        "column": 1
+                    },
+                    "end_loc": {
+                        "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                        "line": 28,
+                        "column": 1
+                    }
+                },
+                "display_name": "<END>",
+                "kind": "end"
+            },
+            "3": {
+                "id": "3",
+                "name": "Region<OutlineCall(R2 fir) BB 'codeRepl' [Atomic,Loop,Atomic] 'Outline_T3_F575_R2_Aggregate'>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                        "line": 9,
+                        "column": 18
+                    },
+                    "end_loc": {
+                        "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                        "line": 9,
+                        "column": 18
+                    }
+                },
+                "display_name": "Process 1",
+                "io_signatures": {
+                    "has_unresolved_accesses": false,
+                    "accesses": [
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                    "line": 9,
+                                    "column": 9
+                                },
+                                "id": "VId_1147_!c?(?,?)",
+                                "name": "reg",
+                                "display_name": "din_t reg[10]"
+                            },
+                            "reads": [],
+                            "writes": [],
+                            "kind": "Unknown",
+                            "has_alias": true
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                    "line": 9,
+                                    "column": 9
+                                },
+                                "id": "VId_1147_[?(?,32)]",
+                                "name": "reg[*]",
+                                "display_name": "din_t reg[10]"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 40,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                        "line": 9,
+                                        "column": 19
+                                    },
+                                    "access_type": "i32",
+                                    "access_bit_width": 32,
+                                    "exec_count": 10
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        }
+                    ]
+                },
+                "metrics": {
+                    "initiation_interval": 12
+                },
+                "subregions": [
+                    {
+                        "id": "%F576_R1",
+                        "description": "<function entry>"
+                    },
+                    {
+                        "id": "%F576_R2",
+                        "description": "<loop 'arrayinit.body'>",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                "line": 9,
+                                "column": 18
+                            },
+                            "end_loc": {
+                                "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                "line": 9,
+                                "column": 18
+                            }
+                        }
+                    },
+                    {
+                        "id": "%F576_R4",
+                        "description": "<function exit>"
+                    }
+                ],
+                "subdataflow": []
+            },
+            "4": {
+                "id": "4",
+                "name": "Region<OutlineCall(R3 fir) BB 'codeRepl1' [Atomic,Loop,Atomic] 'Outline_T4_F575_R6_Loop'>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                        "line": 12,
+                        "column": 16
+                    },
+                    "end_loc": {
+                        "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                        "line": 27,
+                        "column": 3
+                    }
+                },
+                "display_name": "sample_loop",
+                "io_signatures": {
+                    "has_unresolved_accesses": false,
+                    "accesses": [
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                    "line": 5,
+                                    "column": 0
+                                },
+                                "id": "VId_1146_[?(?,32)]dc",
+                                "name": "out[*]",
+                                "display_name": "dout_t out[100]"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 400,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                        "line": 4294967295,
+                                        "column": 0
+                                    },
+                                    "access_type": "i19",
+                                    "access_bit_width": 19,
+                                    "exec_count": 100
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false,
+                            "arg_idx": 1
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                    "line": 9,
+                                    "column": 9
+                                },
+                                "id": "VId_1147_[?(?,32)]",
+                                "name": "reg[*]",
+                                "display_name": "din_t reg[10]"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 36,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                        "line": 4294967295,
+                                        "column": 0
+                                    },
+                                    "access_type": "i17",
+                                    "access_bit_width": 17,
+                                    "exec_count": 900
+                                },
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 40,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                        "line": 22,
+                                        "column": 16
+                                    },
+                                    "access_type": "i17",
+                                    "access_bit_width": 17,
+                                    "exec_count": 1000
+                                }
+                            ],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 4,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                        "line": 4294967295,
+                                        "column": 0
+                                    },
+                                    "access_type": "i17",
+                                    "access_bit_width": 17,
+                                    "exec_count": 100
+                                },
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 4,
+                                                "end": 40,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                        "line": 4294967295,
+                                        "column": 0
+                                    },
+                                    "access_type": "i17",
+                                    "access_bit_width": 17,
+                                    "exec_count": 900
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                    "line": 5,
+                                    "column": 0
+                                },
+                                "id": "VId_1145_[?(?,32)]dc",
+                                "name": "in[*]",
+                                "display_name": "din_t in[100]"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 400,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                        "line": 4294967295,
+                                        "column": 0
+                                    },
+                                    "access_type": "i17",
+                                    "access_bit_width": 17,
+                                    "exec_count": 100
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false,
+                            "arg_idx": 0
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                    "line": 3,
+                                    "column": 0
+                                },
+                                "id": "VId_9_[?(?,32)].A0(0,32).A0(0,32).A0(0,32)",
+                                "name": "a[*].V.VAL",
+                                "display_name": "ValType ssdm_int_sim<17, true>::ap_private<17, true, true>::VAL"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 40,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                        "line": 22,
+                                        "column": 16
+                                    },
+                                    "access_type": "i17",
+                                    "access_bit_width": 17,
+                                    "exec_count": 1000
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        }
+                    ]
+                },
+                "metrics": {
+                    "initiation_interval": 6002
+                },
+                "subregions": [
+                    {
+                        "id": "%F577_R1",
+                        "description": "<function entry>"
+                    },
+                    {
+                        "id": "%F577_R2",
+                        "description": "<loop 'sample_loop'>",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                "line": 12,
+                                "column": 16
+                            },
+                            "end_loc": {
+                                "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                "line": 27,
+                                "column": 3
+                            }
+                        }
+                    },
+                    {
+                        "id": "%F577_R16",
+                        "description": "<function exit>"
+                    }
+                ],
+                "subdataflow": [],
+                "guidance": [
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 6000,
+                            "max": 6000
+                        },
+                        "ii": {
+                            "min": 60,
+                            "max": 60
+                        },
+                        "effective_tc": {
+                            "min": 100,
+                            "max": 100
+                        },
+                        "tc": {
+                            "min": 100,
+                            "max": 100
+                        },
+                        "ureg_id": "%L21",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                "line": 12,
+                                "column": 16
+                            },
+                            "end_loc": {
+                                "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                "line": 27,
+                                "column": 3
+                            }
+                        },
+                        "details": [
+                            {
+                                "type": "MemPortContention",
+                                "available_ports": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "required_ports": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "ii_lower_bound": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "variable": {
+                                    "name": "reg",
+                                    "display_name": "reg",
+                                    "id": "1159",
+                                    "location": {
+                                        "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                        "line": 9,
+                                        "column": 0
+                                    }
+                                }
+                            },
+                            {
+                                "type": "CyclicDependence",
+                                "ii_lower_bound": {
+                                    "min": 9,
+                                    "max": 9
+                                },
+                                "variables": [
+                                    {
+                                        "name": "i5 = load arrayidx",
+                                        "display_name": "reg[*].V",
+                                        "id": "<unknown>",
+                                        "location": {
+                                            "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                            "line": 4294967295,
+                                            "column": 0
+                                        }
+                                    },
+                                    {
+                                        "name": "store i5, arrayidx6",
+                                        "display_name": "reg[*].V",
+                                        "id": "<unknown>",
+                                        "location": {
+                                            "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                            "line": 4294967295,
+                                            "column": 0
+                                        }
+                                    },
+                                    {
+                                        "name": "i9 = load arrayidx8",
+                                        "display_name": "in[*]",
+                                        "id": "<unknown>",
+                                        "location": {
+                                            "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                            "line": 4294967295,
+                                            "column": 0
+                                        }
+                                    },
+                                    {
+                                        "name": "store i9, arrayidx9",
+                                        "display_name": "reg[*].V",
+                                        "id": "<unknown>",
+                                        "location": {
+                                            "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                            "line": 4294967295,
+                                            "column": 0
+                                        }
+                                    },
+                                    {
+                                        "name": "y [phi]",
+                                        "id": "<unknown>"
+                                    },
+                                    {
+                                        "name": "i22 = load this112.cast.i",
+                                        "display_name": "a[*].V.VAL",
+                                        "id": "<unknown>",
+                                        "location": {
+                                            "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                            "line": 22,
+                                            "column": 16
+                                        }
+                                    },
+                                    {
+                                        "name": "conv.i [sext]",
+                                        "id": "<unknown>",
+                                        "location": {
+                                            "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                            "line": 22,
+                                            "column": 16
+                                        }
+                                    },
+                                    {
+                                        "name": "i23 = load arrayidx17",
+                                        "display_name": "reg[*].V",
+                                        "id": "<unknown>",
+                                        "location": {
+                                            "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                            "line": 22,
+                                            "column": 16
+                                        }
+                                    },
+                                    {
+                                        "name": "conv7.i [sext]",
+                                        "id": "<unknown>",
+                                        "location": {
+                                            "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                            "line": 22,
+                                            "column": 16
+                                        }
+                                    },
+                                    {
+                                        "name": "mul.i [mul]",
+                                        "id": "<unknown>",
+                                        "location": {
+                                            "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                            "line": 22,
+                                            "column": 16
+                                        }
+                                    },
+                                    {
+                                        "name": "conv5.i.i.i.i.i [sext]",
+                                        "id": "<unknown>",
+                                        "location": {
+                                            "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                            "line": 22,
+                                            "column": 9
+                                        }
+                                    },
+                                    {
+                                        "name": "shl.i.i.i.i.i [shl]",
+                                        "id": "<unknown>",
+                                        "location": {
+                                            "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                            "line": 22,
+                                            "column": 9
+                                        }
+                                    },
+                                    {
+                                        "name": "conv4.i.i.i.i.i [sext]",
+                                        "id": "<unknown>",
+                                        "location": {
+                                            "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                            "line": 22,
+                                            "column": 9
+                                        }
+                                    },
+                                    {
+                                        "name": "add.i.i [add]",
+                                        "id": "<unknown>",
+                                        "location": {
+                                            "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                            "line": 22,
+                                            "column": 9
+                                        }
+                                    },
+                                    {
+                                        "name": "i31 [lshr]",
+                                        "id": "<unknown>",
+                                        "location": {
+                                            "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                            "line": 22,
+                                            "column": 9
+                                        }
+                                    },
+                                    {
+                                        "name": "conv.i.i [trunc]",
+                                        "id": "<unknown>",
+                                        "location": {
+                                            "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                            "line": 22,
+                                            "column": 9
+                                        }
+                                    },
+                                    {
+                                        "name": "conv [phi]",
+                                        "id": "<unknown>",
+                                        "location": {
+                                            "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                            "line": 22,
+                                            "column": 9
+                                        }
+                                    },
+                                    {
+                                        "name": "store conv.i.i.lcssa, arrayidx21",
+                                        "display_name": "out[*]",
+                                        "id": "<unknown>",
+                                        "location": {
+                                            "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                            "line": 4294967295,
+                                            "column": 0
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 18,
+                            "max": 18
+                        },
+                        "ii": {
+                            "min": 2,
+                            "max": 2
+                        },
+                        "effective_tc": {
+                            "min": 9,
+                            "max": 9
+                        },
+                        "tc": {
+                            "min": 9,
+                            "max": 9
+                        },
+                        "ureg_id": "%L22",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                "line": 14,
+                                "column": 17
+                            },
+                            "end_loc": {
+                                "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                "line": 16,
+                                "column": 5
+                            }
+                        },
+                        "details": [
+                            {
+                                "type": "MemPortContention",
+                                "available_ports": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "required_ports": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "ii_lower_bound": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "variable": {
+                                    "name": "reg",
+                                    "display_name": "reg",
+                                    "id": "1159",
+                                    "location": {
+                                        "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                        "line": 9,
+                                        "column": 0
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 40,
+                            "max": 40
+                        },
+                        "ii": {
+                            "min": 4,
+                            "max": 4
+                        },
+                        "effective_tc": {
+                            "min": 10,
+                            "max": 10
+                        },
+                        "tc": {
+                            "min": 10,
+                            "max": 10
+                        },
+                        "ureg_id": "%L23",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                "line": 21,
+                                "column": 15
+                            },
+                            "end_loc": {
+                                "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                "line": 23,
+                                "column": 5
+                            }
+                        },
+                        "details": [
+                            {
+                                "type": "MemPortContention",
+                                "available_ports": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "required_ports": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "ii_lower_bound": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "variable": {
+                                    "name": "a",
+                                    "display_name": "a",
+                                    "id": "9",
+                                    "location": {
+                                        "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                        "line": 3,
+                                        "column": 0
+                                    }
+                                }
+                            },
+                            {
+                                "type": "MemPortContention",
+                                "available_ports": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "required_ports": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "ii_lower_bound": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "variable": {
+                                    "name": "reg",
+                                    "display_name": "reg",
+                                    "id": "1159",
+                                    "location": {
+                                        "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                        "line": 9,
+                                        "column": 0
+                                    }
+                                }
+                            },
+                            {
+                                "type": "CyclicDependence",
+                                "ii_lower_bound": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "variables": [
+                                    {
+                                        "name": "y [phi]",
+                                        "id": "<unknown>"
+                                    },
+                                    {
+                                        "name": "conv5.i.i.i.i.i [sext]",
+                                        "id": "<unknown>",
+                                        "location": {
+                                            "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                            "line": 22,
+                                            "column": 9
+                                        }
+                                    },
+                                    {
+                                        "name": "shl.i.i.i.i.i [shl]",
+                                        "id": "<unknown>",
+                                        "location": {
+                                            "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                            "line": 22,
+                                            "column": 9
+                                        }
+                                    },
+                                    {
+                                        "name": "add.i.i [add]",
+                                        "id": "<unknown>",
+                                        "location": {
+                                            "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                            "line": 22,
+                                            "column": 9
+                                        }
+                                    },
+                                    {
+                                        "name": "i31 [lshr]",
+                                        "id": "<unknown>",
+                                        "location": {
+                                            "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                            "line": 22,
+                                            "column": 9
+                                        }
+                                    },
+                                    {
+                                        "name": "conv.i.i [trunc]",
+                                        "id": "<unknown>",
+                                        "location": {
+                                            "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                                            "line": 22,
+                                            "column": 9
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "channels": {
+            "in[*]_RAW_1_4_#0": {
+                "name": "in[*]_RAW_1_4_#0",
+                "variable_id": "VId_1145_[?(?,32)]dc",
+                "variable_name": "in[*]",
+                "declaration": "din_t in[100]",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 17,
+                "src_loc": {
+                    "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                    "line": 5,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 1700,
+                    "channel_rate": 2.8323892035988E-1
+                },
+                "source": "1",
+                "sink": "4"
+            },
+            "reg[*]_RAW_3_4_#1": {
+                "name": "reg[*]_RAW_3_4_#1",
+                "variable_id": "VId_1147_[?(?,32)]",
+                "variable_name": "reg[*]",
+                "declaration": "din_t reg[10]",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 17,
+                "src_loc": {
+                    "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                    "line": 9,
+                    "column": 9
+                },
+                "metrics": {
+                    "volume": 32300,
+                    "channel_rate": 5.38153948683772E0
+                },
+                "source": "3",
+                "sink": "4"
+            },
+            "a[*].V.VAL_RAW_1_4_#2": {
+                "name": "a[*].V.VAL_RAW_1_4_#2",
+                "variable_id": "VId_9_[?(?,32)].A0(0,32).A0(0,32).A0(0,32)",
+                "variable_name": "a[*].V.VAL",
+                "declaration": "ValType ssdm_int_sim<17, true>::ap_private<17, true, true>::VAL",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 17,
+                "src_loc": {
+                    "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                    "line": 3,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 17000,
+                    "channel_rate": 2.8323892035988005E0
+                },
+                "source": "1",
+                "sink": "4"
+            },
+            "reg[*]_WAW_3_4_#3": {
+                "name": "reg[*]_WAW_3_4_#3",
+                "variable_id": "VId_1147_[?(?,32)]",
+                "variable_name": "reg[*]",
+                "declaration": "din_t reg[10]",
+                "kind": "Ptr",
+                "dependence": "WAW",
+                "channel_width": 17,
+                "src_loc": {
+                    "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                    "line": 9,
+                    "column": 9
+                },
+                "source": "3",
+                "sink": "4"
+            },
+            "out[*]_RAW_4_2_#4": {
+                "name": "out[*]_RAW_4_2_#4",
+                "variable_id": "VId_1146_[?(?,32)]dc",
+                "variable_name": "out[*]",
+                "declaration": "dout_t out[100]",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 19,
+                "src_loc": {
+                    "file": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+                    "line": 5,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 1900,
+                    "channel_rate": 3.165611462845718E-1
+                },
+                "source": "4",
+                "sink": "2"
+            }
+        },
+        "control": [
+            {
+                "source": "3",
+                "sink": "4"
+            },
+            {
+                "source": "1",
+                "sink": "3"
+            },
+            {
+                "source": "4",
+                "sink": "2"
+            }
+        ]
+    }
+]

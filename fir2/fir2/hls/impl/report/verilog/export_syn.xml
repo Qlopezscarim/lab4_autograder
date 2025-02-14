@@ -1,0 +1,196 @@
+<profile>
+  <RunData>
+    <RUN_TYPE>synth</RUN_TYPE>
+    <VIVADO_VERSION>v.2024.2</VIVADO_VERSION>
+    <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+  </RunData>
+  <TimingReport>
+    <TargetClockPeriod>5.000</TargetClockPeriod>
+    <AchievedClockPeriod>1.752</AchievedClockPeriod>
+    <CLOCK_NAME>ap_clk</CLOCK_NAME>
+    <CP_FINAL>1.752</CP_FINAL>
+    <CP_ROUTE>NA</CP_ROUTE>
+    <CP_SYNTH>1.752</CP_SYNTH>
+    <CP_TARGET>5.000</CP_TARGET>
+    <SLACK_FINAL>3.248</SLACK_FINAL>
+    <SLACK_ROUTE/>
+    <SLACK_SYNTH>3.248</SLACK_SYNTH>
+    <TIMING_MET>TRUE</TIMING_MET>
+    <TNS_FINAL>0.000</TNS_FINAL>
+    <TNS_ROUTE>NA</TNS_ROUTE>
+    <TNS_SYNTH>0.000</TNS_SYNTH>
+    <WNS_FINAL>3.248</WNS_FINAL>
+    <WNS_ROUTE>NA</WNS_ROUTE>
+    <WNS_SYNTH>3.248</WNS_SYNTH>
+  </TimingReport>
+  <AreaReport>
+    <Resources>
+      <BRAM>0</BRAM>
+      <CLB>0</CLB>
+      <DSP>9</DSP>
+      <FF>444</FF>
+      <LATCH>0</LATCH>
+      <LUT>112</LUT>
+      <SRL>2</SRL>
+      <URAM>0</URAM>
+    </Resources>
+    <AvailableResources>
+      <BRAM>2160</BRAM>
+      <CLB>0</CLB>
+      <DSP>4272</DSP>
+      <FF>850560</FF>
+      <LUT>425280</LUT>
+      <URAM>80</URAM>
+    </AvailableResources>
+  </AreaReport>
+  <RtlModules>
+    <RtlModule CELL="inst" DEPTH="0" IS_TOP="1" TYPE="function" MODULENAME="fir" DISPNAME="inst" RTLNAME="fir">
+      <SubModules count="13">control_s_axi_U flow_control_loop_delay_pipe_U mac_muladd_17s_11ns_33s_33_4_1_U4 mac_muladd_17s_12ns_33s_33_4_1_U8 mac_muladd_17s_13ns_33s_33_4_1_U7 mac_muladd_17s_13s_33s_33_4_1_U9 mac_muladd_17s_14ns_32s_33_4_1_U2 mac_muladd_17s_14ns_33s_33_4_1_U5 mac_muladd_17s_14s_33s_33_4_1_U3 mac_muladd_17s_15s_31s_32_4_1_U1 mac_muladd_17s_15s_33s_33_4_1_U6 regslice_both_in_r_U regslice_both_out_r_U</SubModules>
+      <Resources DSP="9" FF="444" LUT="112"/>
+      <LocalResources FF="298" LUT="3"/>
+    </RtlModule>
+    <RtlModule CELL="inst/control_s_axi_U" DEPTH="1" TYPE="resource" MODULENAME="control_s_axi" DISPNAME="control_s_axi_U" RTLNAME="fir_control_s_axi">
+      <Resources FF="28" LUT="29"/>
+      <BindNode BINDTYPE="adapter" BRAM="0" BUNDLEDNAME="control" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="control_s_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="s_axilite" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
+    </RtlModule>
+    <RtlModule CELL="inst/flow_control_loop_delay_pipe_U" DEPTH="1" TYPE="rtl" MODULENAME="flow_control_loop_delay_pipe" DISPNAME="flow_control_loop_delay_pipe_U" RTLNAME="fir_flow_control_loop_delay_pipe">
+      <Resources FF="2" LUT="23"/>
+    </RtlModule>
+    <RtlModule CELL="inst/mac_muladd_17s_11ns_33s_33_4_1_U4" DEPTH="1" TYPE="resource" MODULENAME="mac_muladd_17s_11ns_33s_33_4_1" DISPNAME="mac_muladd_17s_11ns_33s_33_4_1_U4" RTLNAME="fir_mac_muladd_17s_11ns_33s_33_4_1">
+      <Resources DSP="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="sample_loop" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_17s_11ns_33s_33_4_1_U4" SOURCE="fir.cpp:22" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln22_3" VISIBLE="true"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sext" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="sample_loop" OPTYPE="sext" PRAGMA="" RTLNAME="mac_muladd_17s_11ns_33s_33_4_1_U4" SOURCE="fir.cpp:22" STORAGESUBTYPE="" URAM="0" VARIABLE="sext_ln22_8" VISIBLE="false"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="sample_loop" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_17s_11ns_33s_33_4_1_U4" SOURCE="fir.cpp:22" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln22_3" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/mac_muladd_17s_12ns_33s_33_4_1_U8" DEPTH="1" TYPE="resource" MODULENAME="mac_muladd_17s_12ns_33s_33_4_1" DISPNAME="mac_muladd_17s_12ns_33s_33_4_1_U8" RTLNAME="fir_mac_muladd_17s_12ns_33s_33_4_1">
+      <Resources DSP="1" FF="17"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="sample_loop" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_17s_12ns_33s_33_4_1_U8" SOURCE="fir.cpp:22" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln22_7" VISIBLE="true"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sext" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="sample_loop" OPTYPE="sext" PRAGMA="" RTLNAME="mac_muladd_17s_12ns_33s_33_4_1_U8" SOURCE="fir.cpp:22" STORAGESUBTYPE="" URAM="0" VARIABLE="sext_ln22_16" VISIBLE="false"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="sample_loop" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_17s_12ns_33s_33_4_1_U8" SOURCE="fir.cpp:22" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln22_7" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/mac_muladd_17s_13ns_33s_33_4_1_U7" DEPTH="1" TYPE="resource" MODULENAME="mac_muladd_17s_13ns_33s_33_4_1" DISPNAME="mac_muladd_17s_13ns_33s_33_4_1_U7" RTLNAME="fir_mac_muladd_17s_13ns_33s_33_4_1">
+      <Resources DSP="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="sample_loop" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_17s_13ns_33s_33_4_1_U7" SOURCE="fir.cpp:22" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln22_6" VISIBLE="true"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sext" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="sample_loop" OPTYPE="sext" PRAGMA="" RTLNAME="mac_muladd_17s_13ns_33s_33_4_1_U7" SOURCE="fir.cpp:22" STORAGESUBTYPE="" URAM="0" VARIABLE="sext_ln22_14" VISIBLE="false"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="sample_loop" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_17s_13ns_33s_33_4_1_U7" SOURCE="fir.cpp:22" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln22_6" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/mac_muladd_17s_13s_33s_33_4_1_U9" DEPTH="1" TYPE="resource" MODULENAME="mac_muladd_17s_13s_33s_33_4_1" DISPNAME="mac_muladd_17s_13s_33s_33_4_1_U9" RTLNAME="fir_mac_muladd_17s_13s_33s_33_4_1">
+      <Resources DSP="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="sample_loop" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_17s_13s_33s_33_4_1_U9" SOURCE="fir.cpp:22" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln22_8" VISIBLE="true"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sext" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="sample_loop" OPTYPE="sext" PRAGMA="" RTLNAME="mac_muladd_17s_13s_33s_33_4_1_U9" SOURCE="fir.cpp:22" STORAGESUBTYPE="" URAM="0" VARIABLE="sext_ln22_18" VISIBLE="false"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="sample_loop" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_17s_13s_33s_33_4_1_U9" SOURCE="fir.cpp:22" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln22_8" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/mac_muladd_17s_14ns_32s_33_4_1_U2" DEPTH="1" TYPE="resource" MODULENAME="mac_muladd_17s_14ns_32s_33_4_1" DISPNAME="mac_muladd_17s_14ns_32s_33_4_1_U2" RTLNAME="fir_mac_muladd_17s_14ns_32s_33_4_1">
+      <Resources DSP="1" FF="17"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="sample_loop" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_17s_14ns_32s_33_4_1_U2" SOURCE="fir.cpp:22" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln22_1" VISIBLE="true"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sext" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="sample_loop" OPTYPE="sext" PRAGMA="" RTLNAME="mac_muladd_17s_14ns_32s_33_4_1_U2" SOURCE="fir.cpp:22" STORAGESUBTYPE="" URAM="0" VARIABLE="sext_ln22_4" VISIBLE="false"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="sample_loop" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_17s_14ns_32s_33_4_1_U2" SOURCE="fir.cpp:22" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln22_1" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/mac_muladd_17s_14ns_33s_33_4_1_U5" DEPTH="1" TYPE="resource" MODULENAME="mac_muladd_17s_14ns_33s_33_4_1" DISPNAME="mac_muladd_17s_14ns_33s_33_4_1_U5" RTLNAME="fir_mac_muladd_17s_14ns_33s_33_4_1">
+      <Resources DSP="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="sample_loop" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_17s_14ns_33s_33_4_1_U5" SOURCE="fir.cpp:22" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln22_4" VISIBLE="true"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sext" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="sample_loop" OPTYPE="sext" PRAGMA="" RTLNAME="mac_muladd_17s_14ns_33s_33_4_1_U5" SOURCE="fir.cpp:22" STORAGESUBTYPE="" URAM="0" VARIABLE="sext_ln22_10" VISIBLE="false"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="sample_loop" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_17s_14ns_33s_33_4_1_U5" SOURCE="fir.cpp:22" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln22_4" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/mac_muladd_17s_14s_33s_33_4_1_U3" DEPTH="1" TYPE="resource" MODULENAME="mac_muladd_17s_14s_33s_33_4_1" DISPNAME="mac_muladd_17s_14s_33s_33_4_1_U3" RTLNAME="fir_mac_muladd_17s_14s_33s_33_4_1">
+      <Resources DSP="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="sample_loop" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_17s_14s_33s_33_4_1_U3" SOURCE="fir.cpp:22" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln22_2" VISIBLE="true"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sext" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="sample_loop" OPTYPE="sext" PRAGMA="" RTLNAME="mac_muladd_17s_14s_33s_33_4_1_U3" SOURCE="fir.cpp:22" STORAGESUBTYPE="" URAM="0" VARIABLE="sext_ln22_6" VISIBLE="false"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="sample_loop" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_17s_14s_33s_33_4_1_U3" SOURCE="fir.cpp:22" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln22_2" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/mac_muladd_17s_15s_31s_32_4_1_U1" DEPTH="1" TYPE="resource" MODULENAME="mac_muladd_17s_15s_31s_32_4_1" DISPNAME="mac_muladd_17s_15s_31s_32_4_1_U1" RTLNAME="fir_mac_muladd_17s_15s_31s_32_4_1">
+      <Resources DSP="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="sample_loop" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_17s_15s_31s_32_4_1_U1" SOURCE="fir.cpp:22" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln22" VISIBLE="true"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="sample_loop" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_17s_15s_31s_32_4_1_U1" SOURCE="fir.cpp:22" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln22" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/mac_muladd_17s_15s_33s_33_4_1_U6" DEPTH="1" TYPE="resource" MODULENAME="mac_muladd_17s_15s_33s_33_4_1" DISPNAME="mac_muladd_17s_15s_33s_33_4_1_U6" RTLNAME="fir_mac_muladd_17s_15s_33s_33_4_1">
+      <Resources DSP="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="sample_loop" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_17s_15s_33s_33_4_1_U6" SOURCE="fir.cpp:22" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln22_5" VISIBLE="true"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sext" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="sample_loop" OPTYPE="sext" PRAGMA="" RTLNAME="mac_muladd_17s_15s_33s_33_4_1_U6" SOURCE="fir.cpp:22" STORAGESUBTYPE="" URAM="0" VARIABLE="sext_ln22_12" VISIBLE="false"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="sample_loop" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_17s_15s_33s_33_4_1_U6" SOURCE="fir.cpp:22" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln22_5" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/regslice_both_in_r_U" DEPTH="1" TYPE="rtl" MODULENAME="regslice_both" DISPNAME="regslice_both_in_r_U" RTLNAME="fir_regslice_both">
+      <Resources FF="39" LUT="23"/>
+    </RtlModule>
+    <RtlModule CELL="inst/regslice_both_out_r_U" DEPTH="1" TYPE="rtl" MODULENAME="regslice_both" DISPNAME="regslice_both_out_r_U" RTLNAME="fir_regslice_both">
+      <Resources FF="43" LUT="34"/>
+    </RtlModule>
+  </RtlModules>
+  <TimingPaths>
+    <TPATH DATAPATH_DELAY="1.513" DATAPATH_LOGIC_DELAY="0.362" DATAPATH_NET_DELAY="1.151" ENDPOINT_PIN="mac_muladd_17s_11ns_33s_33_4_1_U4/fir_mac_muladd_17s_11ns_33s_33_4_1_DSP48_0_U/p_reg_reg/DSP_OUTPUT_INST/CEP" LOGIC_LEVELS="3" MAX_FANOUT="204" SLACK="3.248" STARTPOINT_PIN="regslice_both_out_r_U/FSM_sequential_state_reg[1]/C">
+      <CELL NAME="regslice_both_out_r_U/FSM_sequential_state_reg[1]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="fir_regslice_both.v" LINE_NUMBER="81"/>
+      <CELL NAME="regslice_both_out_r_U/reg_6_fu_118[16]_i_5" PRIMITIVE_TYPE="CLB.LUT.LUT5" FILE_NAME="fir_control_s_axi.v" LINE_NUMBER="119"/>
+      <CELL NAME="regslice_both_out_r_U/int_ap_start_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="fir_control_s_axi.v" LINE_NUMBER="119"/>
+      <CELL NAME="regslice_both_out_r_U/reg_17_reg_630[16]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT1" FILE_NAME="fir_control_s_axi.v" LINE_NUMBER="119"/>
+      <CELL NAME="mac_muladd_17s_11ns_33s_33_4_1_U4/fir_mac_muladd_17s_11ns_33s_33_4_1_DSP48_0_U/p_reg_reg/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER="" MODULE_INSTNAME="mac_muladd_17s_11ns_33s_33_4_1_U4" IS_FUNCINST="0"/>
+      <MODULE_INSTANCES>mac_muladd_17s_11ns_33s_33_4_1_U4 mac_muladd_17s_12ns_33s_33_4_1_U8 mac_muladd_17s_13ns_33s_33_4_1_U7 mac_muladd_17s_13s_33s_33_4_1_U9 mac_muladd_17s_14ns_32s_33_4_1_U2</MODULE_INSTANCES>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="1.513" DATAPATH_LOGIC_DELAY="0.362" DATAPATH_NET_DELAY="1.151" ENDPOINT_PIN="mac_muladd_17s_12ns_33s_33_4_1_U8/fir_mac_muladd_17s_12ns_33s_33_4_1_DSP48_0_U/p_reg_reg__0/DSP_OUTPUT_INST/CEP" LOGIC_LEVELS="3" MAX_FANOUT="204" SLACK="3.248" STARTPOINT_PIN="regslice_both_out_r_U/FSM_sequential_state_reg[1]/C">
+      <CELL NAME="regslice_both_out_r_U/FSM_sequential_state_reg[1]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="fir_regslice_both.v" LINE_NUMBER="81"/>
+      <CELL NAME="regslice_both_out_r_U/reg_6_fu_118[16]_i_5" PRIMITIVE_TYPE="CLB.LUT.LUT5" FILE_NAME="fir_control_s_axi.v" LINE_NUMBER="119"/>
+      <CELL NAME="regslice_both_out_r_U/int_ap_start_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="fir_control_s_axi.v" LINE_NUMBER="119"/>
+      <CELL NAME="regslice_both_out_r_U/reg_17_reg_630[16]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT1" FILE_NAME="fir_control_s_axi.v" LINE_NUMBER="119"/>
+      <CELL NAME="mac_muladd_17s_12ns_33s_33_4_1_U8/fir_mac_muladd_17s_12ns_33s_33_4_1_DSP48_0_U/p_reg_reg__0/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER="" MODULE_INSTNAME="mac_muladd_17s_12ns_33s_33_4_1_U8" IS_FUNCINST="0"/>
+      <MODULE_INSTANCES>mac_muladd_17s_11ns_33s_33_4_1_U4 mac_muladd_17s_12ns_33s_33_4_1_U8 mac_muladd_17s_13ns_33s_33_4_1_U7 mac_muladd_17s_13s_33s_33_4_1_U9 mac_muladd_17s_14ns_32s_33_4_1_U2</MODULE_INSTANCES>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="1.513" DATAPATH_LOGIC_DELAY="0.362" DATAPATH_NET_DELAY="1.151" ENDPOINT_PIN="mac_muladd_17s_13ns_33s_33_4_1_U7/fir_mac_muladd_17s_13ns_33s_33_4_1_DSP48_0_U/p_reg_reg/DSP_OUTPUT_INST/CEP" LOGIC_LEVELS="3" MAX_FANOUT="204" SLACK="3.248" STARTPOINT_PIN="regslice_both_out_r_U/FSM_sequential_state_reg[1]/C">
+      <CELL NAME="regslice_both_out_r_U/FSM_sequential_state_reg[1]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="fir_regslice_both.v" LINE_NUMBER="81"/>
+      <CELL NAME="regslice_both_out_r_U/reg_6_fu_118[16]_i_5" PRIMITIVE_TYPE="CLB.LUT.LUT5" FILE_NAME="fir_control_s_axi.v" LINE_NUMBER="119"/>
+      <CELL NAME="regslice_both_out_r_U/int_ap_start_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="fir_control_s_axi.v" LINE_NUMBER="119"/>
+      <CELL NAME="regslice_both_out_r_U/reg_17_reg_630[16]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT1" FILE_NAME="fir_control_s_axi.v" LINE_NUMBER="119"/>
+      <CELL NAME="mac_muladd_17s_13ns_33s_33_4_1_U7/fir_mac_muladd_17s_13ns_33s_33_4_1_DSP48_0_U/p_reg_reg/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER="" MODULE_INSTNAME="mac_muladd_17s_13ns_33s_33_4_1_U7" IS_FUNCINST="0"/>
+      <MODULE_INSTANCES>mac_muladd_17s_11ns_33s_33_4_1_U4 mac_muladd_17s_12ns_33s_33_4_1_U8 mac_muladd_17s_13ns_33s_33_4_1_U7 mac_muladd_17s_13s_33s_33_4_1_U9 mac_muladd_17s_14ns_32s_33_4_1_U2</MODULE_INSTANCES>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="1.513" DATAPATH_LOGIC_DELAY="0.362" DATAPATH_NET_DELAY="1.151" ENDPOINT_PIN="mac_muladd_17s_13s_33s_33_4_1_U9/fir_mac_muladd_17s_13s_33s_33_4_1_DSP48_0_U/p_reg_reg/DSP_OUTPUT_INST/CEP" LOGIC_LEVELS="3" MAX_FANOUT="204" SLACK="3.248" STARTPOINT_PIN="regslice_both_out_r_U/FSM_sequential_state_reg[1]/C">
+      <CELL NAME="regslice_both_out_r_U/FSM_sequential_state_reg[1]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="fir_regslice_both.v" LINE_NUMBER="81"/>
+      <CELL NAME="regslice_both_out_r_U/reg_6_fu_118[16]_i_5" PRIMITIVE_TYPE="CLB.LUT.LUT5" FILE_NAME="fir_control_s_axi.v" LINE_NUMBER="119"/>
+      <CELL NAME="regslice_both_out_r_U/int_ap_start_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="fir_control_s_axi.v" LINE_NUMBER="119"/>
+      <CELL NAME="regslice_both_out_r_U/reg_17_reg_630[16]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT1" FILE_NAME="fir_control_s_axi.v" LINE_NUMBER="119"/>
+      <CELL NAME="mac_muladd_17s_13s_33s_33_4_1_U9/fir_mac_muladd_17s_13s_33s_33_4_1_DSP48_0_U/p_reg_reg/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER="" MODULE_INSTNAME="mac_muladd_17s_13s_33s_33_4_1_U9" IS_FUNCINST="0"/>
+      <MODULE_INSTANCES>mac_muladd_17s_11ns_33s_33_4_1_U4 mac_muladd_17s_12ns_33s_33_4_1_U8 mac_muladd_17s_13ns_33s_33_4_1_U7 mac_muladd_17s_13s_33s_33_4_1_U9 mac_muladd_17s_14ns_32s_33_4_1_U2</MODULE_INSTANCES>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="1.513" DATAPATH_LOGIC_DELAY="0.362" DATAPATH_NET_DELAY="1.151" ENDPOINT_PIN="mac_muladd_17s_14ns_32s_33_4_1_U2/fir_mac_muladd_17s_14ns_32s_33_4_1_DSP48_0_U/p_reg_reg/DSP_OUTPUT_INST/CEP" LOGIC_LEVELS="3" MAX_FANOUT="204" SLACK="3.248" STARTPOINT_PIN="regslice_both_out_r_U/FSM_sequential_state_reg[1]/C">
+      <CELL NAME="regslice_both_out_r_U/FSM_sequential_state_reg[1]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="fir_regslice_both.v" LINE_NUMBER="81"/>
+      <CELL NAME="regslice_both_out_r_U/reg_6_fu_118[16]_i_5" PRIMITIVE_TYPE="CLB.LUT.LUT5" FILE_NAME="fir_control_s_axi.v" LINE_NUMBER="119"/>
+      <CELL NAME="regslice_both_out_r_U/int_ap_start_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="fir_control_s_axi.v" LINE_NUMBER="119"/>
+      <CELL NAME="regslice_both_out_r_U/reg_17_reg_630[16]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT1" FILE_NAME="fir_control_s_axi.v" LINE_NUMBER="119"/>
+      <CELL NAME="mac_muladd_17s_14ns_32s_33_4_1_U2/fir_mac_muladd_17s_14ns_32s_33_4_1_DSP48_0_U/p_reg_reg/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER="" MODULE_INSTNAME="mac_muladd_17s_14ns_32s_33_4_1_U2" IS_FUNCINST="0"/>
+      <MODULE_INSTANCES>mac_muladd_17s_11ns_33s_33_4_1_U4 mac_muladd_17s_12ns_33s_33_4_1_U8 mac_muladd_17s_13ns_33s_33_4_1_U7 mac_muladd_17s_13s_33s_33_4_1_U9 mac_muladd_17s_14ns_32s_33_4_1_U2</MODULE_INSTANCES>
+    </TPATH>
+  </TimingPaths>
+  <VivadoReportFiles>
+    <ReportFile TYPE="design_analysis" PATH="verilog/report/fir_design_analysis_synth.rpt"/>
+    <ReportFile TYPE="failfast" PATH="verilog/report/fir_failfast_synth.rpt"/>
+    <ReportFile TYPE="power" PATH="verilog/report/fir_power_synth.rpt"/>
+    <ReportFile TYPE="timing" PATH="verilog/report/fir_timing_synth.rpt"/>
+    <ReportFile TYPE="timing_paths" PATH="verilog/report/fir_timing_paths_synth.rpt"/>
+    <ReportFile TYPE="utilization" PATH="verilog/report/fir_utilization_synth.rpt"/>
+    <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/fir_utilization_hierarchical_synth.rpt"/>
+  </VivadoReportFiles>
+  <GeneralInfo NAME="General Information">
+    <item NAME="Date" VALUE="Thu Feb 13 20:28:54 EST 2025"/>
+    <item NAME="Version" VALUE="2024.2 (Build 5238294 on Nov  8 2024)"/>
+    <item NAME="Project" VALUE="fir2"/>
+    <item NAME="Solution" VALUE="hls (Vitis Kernel Flow Target)"/>
+    <item NAME="Product family" VALUE="zynquplusRFSOC"/>
+    <item NAME="Target device" VALUE="xczu48dr-ffvg1517-2-e"/>
+  </GeneralInfo>
+  <RunOptions NAME="Run Constraints &amp; Options">
+    <General NAME="Design Constraints &amp; Options">
+      <item NAME="RTL Synthesis target clock" VALUE="5 ns"/>
+      <item NAME="C-Synthesis target clock" VALUE="5 ns"/>
+      <item NAME="C-Synthesis uncertainty" VALUE="27%"/>
+      <item NAME="config_export -ip_xdc_file" VALUE=""/>
+      <item NAME="config_export -ip_xdc_ooc_file" VALUE=""/>
+    </General>
+    <Syn NAME="RTL Synthesis Options">
+      <item NAME="config_export -vivado_synth_strategy" VALUE="default"/>
+      <item NAME="config_export -vivado_synth_design_args" VALUE="-directive sdx_optimization_effort_high"/>
+    </Syn>
+    <Reporting NAME="Reporting Options">
+      <item NAME="config_export -vivado_report_level" VALUE="2"/>
+      <item NAME="config_export -vivado_max_timing_paths" VALUE="10"/>
+    </Reporting>
+  </RunOptions>
+</profile>
+

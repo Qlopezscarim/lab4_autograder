@@ -1,0 +1,1 @@
+parallelismSelector::WARNG: WARNING: [SIM 211-206] Code Analyzer does not display the impact of the partition pragma for dataflow channels (/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp:10:1)

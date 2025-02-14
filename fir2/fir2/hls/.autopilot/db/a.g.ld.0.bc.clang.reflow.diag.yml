@@ -1,0 +1,136 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir2/hls/.autopilot/db/fir.pp.0.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_fir.pp.0.cpp
+Args:            
+  - Callee:          __cxx_global_var_init
+    DebugLoc:        { File: fir.cpp, Line: 3, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_fir.pp.0.cpp
+    DebugLoc:        { File: /ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir2/hls/.autopilot/db/fir.pp.0.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_fir_ir
+Args:            
+  - Callee:          'fir(ap_fixed<17, 2, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<19, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
+    DebugLoc:        { File: fir.cpp, Line: 5, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_fir_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: fir.cpp, Line: 9, Column: 8 }
+Function:        _Z3firP8ap_fixedILi17ELi2EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi19ELi3ELS0_5ELS1_3ELi0EE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          reg
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        unknown
+  - String:          '> at '
+  - LoopLoc:         'fir.cpp:9:18'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        sample_loop
+  - String:          '> at '
+  - LoopLoc:         'fir.cpp:12:15'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: fir.cpp, Line: 14, Column: 17 }
+Function:        _Z3firP8ap_fixedILi17ELi2EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi19ELi3ELS0_5ELS1_3ELi0EE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        shift_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: fir.cpp, Line: 21, Column: 15 }
+Function:        _Z3firP8ap_fixedILi17ELi2EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi19ELi3ELS0_5ELS1_3ELi0EE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        fir_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: fir.cpp, Line: 5, Column: 0 }
+Function:        _Z3firP8ap_fixedILi17ELi2EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi19ELi3ELS0_5ELS1_3ELi0EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        shift_loop
+  - String:          ''' ('
+  - LoopLoc:         'fir.cpp:14:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fir
+  - String:          ''' completely with a factor of '
+  - Factor:          '9'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: fir.cpp, Line: 5, Column: 0 }
+Function:        _Z3firP8ap_fixedILi17ELi2EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi19ELi3ELS0_5ELS1_3ELi0EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        fir_loop
+  - String:          ''' ('
+  - LoopLoc:         'fir.cpp:21:15'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fir
+  - String:          ''' completely with a factor of '
+  - Factor:          '10'
+...
+--- !Missed
+Pass:            pasta-interface-builder
+Name:            UnsupportArrayToStream
+DebugLoc:        { File: fir.cpp, Line: 5, Column: 0 }
+Function:        _Z3firP8ap_fixedILi17ELi2EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi19ELi3ELS0_5ELS1_3ELi0EE
+Args:            
+  - String:          'Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '''
+  - Name:            in_r
+  - String:          ''''
+...
+--- !Missed
+Pass:            pasta-interface-builder
+Name:            UnsupportArrayToStream
+DebugLoc:        { File: fir.cpp, Line: 5, Column: 0 }
+Function:        _Z3firP8ap_fixedILi17ELi2EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi19ELi3ELS0_5ELS1_3ELi0EE
+Args:            
+  - String:          'Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '''
+  - Name:            out_r
+  - String:          ''''
+...

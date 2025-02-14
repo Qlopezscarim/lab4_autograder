@@ -1,0 +1,80 @@
+<ENTRY>
+{
+ "thisFile": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir2/hls/csim/code_analyzer/app.csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Thu Feb 13 20:15:54 2025",
+ "timestampMillis": "1739495754442",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [],
+  "toolVersion": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Feb 13 20:15:54 2025",
+ "timestampMillis": "1739495754442",
+ "buildStep": {
+  "cmdId": "3cd2c2f4-ea71-11ef-b17a-0050568b624d",
+  "name": "vitis_c++",
+  "logFile": "",
+  "commandLine": "vitis_c++ code_analyzer",
+  "args": [
+   "code_analyzer"
+  ],
+  "iniFiles": [],
+  "cwd": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Feb 13 20:15:54 2025",
+ "timestampMillis": "1739495754443",
+ "status": {
+  "cmdId": "3cd2c2f4-ea71-11ef-b17a-0050568b624d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Feb 13 20:16:01 2025",
+ "timestampMillis": "1739495761277",
+ "status": {
+  "cmdId": "3cd2c2f4-ea71-11ef-b17a-0050568b624d",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Feb 13 20:16:01 2025",
+ "timestampMillis": "1739495761278",
+ "report": {
+  "path": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "VCXX_CODE_ANALYZER",
+  "cmdId": "3cd2c2f4-ea71-11ef-b17a-0050568b624d"
+ }
+}
+</ENTRY>

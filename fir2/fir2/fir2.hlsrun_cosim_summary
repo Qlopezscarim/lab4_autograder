@@ -1,0 +1,227 @@
+<ENTRY>
+{
+ "thisFile": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir2/fir2.hlsrun_cosim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Feb 13 20:18:15 2025",
+ "timestampMillis": "1739495895904",
+ "buildStep": {
+  "cmdId": "91ac1f49-08c2-40f9-a1b9-d2067eb48b71",
+  "name": "vitis-run",
+  "logFile": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir2/logs/fir2.steps.log",
+  "commandLine": "/apps/xilinx24/Vitis/2024.2/bin/unwrapped/lnx64.o/vitis-run  --mode hls --cosim --config /ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/hls_config.cfg --work_dir fir2 ",
+  "args": [
+   "--mode",
+   "hls",
+   "--cosim",
+   "--config",
+   "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/hls_config.cfg",
+   "--work_dir",
+   "fir2"
+  ],
+  "iniFiles": [],
+  "cwd": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Feb 13 20:18:15 2025",
+ "timestampMillis": "1739495895904",
+ "status": {
+  "cmdId": "91ac1f49-08c2-40f9-a1b9-d2067eb48b71",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Thu Feb 13 20:18:25 2025",
+ "timestampMillis": "1739495905459",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_RTL_COSIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "fir",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.cpp",
+     "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Feb 13 20:18:25 2025",
+ "timestampMillis": "1739495905461",
+ "buildStep": {
+  "cmdId": "ec803f26-ce6f-4753-b33a-6515b9812ca0",
+  "name": "",
+  "logFile": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir2/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Feb 13 20:18:25 2025",
+ "timestampMillis": "1739495905465",
+ "status": {
+  "cmdId": "ec803f26-ce6f-4753-b33a-6515b9812ca0",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Feb 13 20:18:25 2025",
+ "timestampMillis": "1739495905465",
+ "report": {
+  "path": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir2/hls/sim/report/fir_cosim.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_COSIMULATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Feb 13 20:18:25 2025",
+ "timestampMillis": "1739495905465",
+ "report": {
+  "path": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir2/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Feb 13 20:18:25 2025",
+ "timestampMillis": "1739495905466",
+ "report": {
+  "path": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir2/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH_COSIM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Feb 13 20:18:25 2025",
+ "timestampMillis": "1739495905466",
+ "report": {
+  "path": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir2/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_TIMELINE_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Feb 13 20:18:25 2025",
+ "timestampMillis": "1739495905467",
+ "report": {
+  "path": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir2/fir2/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_WAVE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Feb 13 20:18:58 2025",
+ "timestampMillis": "1739495938372",
+ "status": {
+  "cmdId": "ec803f26-ce6f-4753-b33a-6515b9812ca0",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Feb 13 20:18:58 2025",
+ "timestampMillis": "1739495938635",
+ "status": {
+  "cmdId": "91ac1f49-08c2-40f9-a1b9-d2067eb48b71",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Feb 13 20:18:58 2025",
+ "timestampMillis": "1739495938639",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Feb 13 20:18:58 2025",
+ "timestampMillis": "1739495938639",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

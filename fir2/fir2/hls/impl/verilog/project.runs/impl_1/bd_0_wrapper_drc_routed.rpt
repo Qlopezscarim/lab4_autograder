@@ -1,0 +1,83 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Thu Feb 13 20:27:53 2025
+| Host         : ece-lnx-4511c running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
+| Command      : report_drc -file bd_0_wrapper_drc_routed.rpt -pb bd_0_wrapper_drc_routed.pb -rpx bd_0_wrapper_drc_routed.rpx
+| Design       : bd_0_wrapper
+| Device       : xczu48dr-ffvg1517-2-e
+| Speed File   : -2
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: checkpoint_bd_0_wrapper
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max checks: <unlimited>
+             Checks found: 9
++-----------+----------+-------------------+--------+
+| Rule      | Severity | Description       | Checks |
++-----------+----------+-------------------+--------+
+| DPIP-2    | Warning  | Input pipelining  | 8      |
+| RTSTAT-10 | Warning  | No routable loads | 1      |
++-----------+----------+-------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+DPIP-2#1 Warning
+Input pipelining  
+DSP bd_0_i/hls_inst/inst/mac_muladd_17s_11ns_33s_33_4_1_U4/fir_mac_muladd_17s_11ns_33s_33_4_1_DSP48_0_U/p_reg_reg input bd_0_i/hls_inst/inst/mac_muladd_17s_11ns_33s_33_4_1_U4/fir_mac_muladd_17s_11ns_33s_33_4_1_DSP48_0_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#2 Warning
+Input pipelining  
+DSP bd_0_i/hls_inst/inst/mac_muladd_17s_12ns_33s_33_4_1_U8/fir_mac_muladd_17s_12ns_33s_33_4_1_DSP48_0_U/p_reg_reg__0 input bd_0_i/hls_inst/inst/mac_muladd_17s_12ns_33s_33_4_1_U8/fir_mac_muladd_17s_12ns_33s_33_4_1_DSP48_0_U/p_reg_reg__0/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#3 Warning
+Input pipelining  
+DSP bd_0_i/hls_inst/inst/mac_muladd_17s_13ns_33s_33_4_1_U7/fir_mac_muladd_17s_13ns_33s_33_4_1_DSP48_0_U/p_reg_reg input bd_0_i/hls_inst/inst/mac_muladd_17s_13ns_33s_33_4_1_U7/fir_mac_muladd_17s_13ns_33s_33_4_1_DSP48_0_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#4 Warning
+Input pipelining  
+DSP bd_0_i/hls_inst/inst/mac_muladd_17s_13s_33s_33_4_1_U9/fir_mac_muladd_17s_13s_33s_33_4_1_DSP48_0_U/p_reg_reg input bd_0_i/hls_inst/inst/mac_muladd_17s_13s_33s_33_4_1_U9/fir_mac_muladd_17s_13s_33s_33_4_1_DSP48_0_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#5 Warning
+Input pipelining  
+DSP bd_0_i/hls_inst/inst/mac_muladd_17s_14ns_32s_33_4_1_U2/fir_mac_muladd_17s_14ns_32s_33_4_1_DSP48_0_U/p_reg_reg input bd_0_i/hls_inst/inst/mac_muladd_17s_14ns_32s_33_4_1_U2/fir_mac_muladd_17s_14ns_32s_33_4_1_DSP48_0_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#6 Warning
+Input pipelining  
+DSP bd_0_i/hls_inst/inst/mac_muladd_17s_14ns_33s_33_4_1_U5/fir_mac_muladd_17s_14ns_33s_33_4_1_DSP48_0_U/p_reg_reg input bd_0_i/hls_inst/inst/mac_muladd_17s_14ns_33s_33_4_1_U5/fir_mac_muladd_17s_14ns_33s_33_4_1_DSP48_0_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#7 Warning
+Input pipelining  
+DSP bd_0_i/hls_inst/inst/mac_muladd_17s_14s_33s_33_4_1_U3/fir_mac_muladd_17s_14s_33s_33_4_1_DSP48_0_U/p_reg_reg input bd_0_i/hls_inst/inst/mac_muladd_17s_14s_33s_33_4_1_U3/fir_mac_muladd_17s_14s_33s_33_4_1_DSP48_0_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#8 Warning
+Input pipelining  
+DSP bd_0_i/hls_inst/inst/mac_muladd_17s_15s_33s_33_4_1_U6/fir_mac_muladd_17s_15s_33s_33_4_1_DSP48_0_U/p_reg_reg input bd_0_i/hls_inst/inst/mac_muladd_17s_15s_33s_33_4_1_U6/fir_mac_muladd_17s_15s_33s_33_4_1_DSP48_0_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+RTSTAT-10#1 Warning
+No routable loads  
+26 net(s) have no routable loads. The problem bus(es) and/or net(s) are bd_0_i/hls_inst/inst/control_s_axi_U/s_axi_control_RDATA[6:0]
+bd_0_i/hls_inst/inst/regslice_both_out_r_U/out_r_TDATA[18:0].
+Related violations: <none>
+
+
