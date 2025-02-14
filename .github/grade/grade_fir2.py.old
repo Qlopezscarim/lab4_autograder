@@ -1,0 +1,79 @@
+# Real-Time DSP Lab 3 Autograder
+# William Davis 2/19/2024
+
+BASE_PATH = 'fir2'
+MAX_DSP = 9
+MAX_FF = 410
+MAX_LUT = 240
+MAX_LATENCY = 113
+
+####################
+import sys
+from pathlib import Path
+import re
+
+REPORT_FILE_PATH = f"{BASE_PATH}/{BASE_PATH}/reports/hls_compile.rpt"
+
+file_paths = {
+    f"{BASE_PATH}/fir.cpp": "fir.cpp not found.",
+    f"{BASE_PATH}/fir.h": "fir.h not found.",
+    f"{BASE_PATH}/fir_test.cpp": "fir_test.cpp not found.",
+    f"{BASE_PATH}/{BASE_PATH}/{BASE_PATH}.hlsrun_csim_summary": "Simulation not run.",
+    f"{BASE_PATH}/{BASE_PATH}/{BASE_PATH}.hlscompile_summary": "Synthesis not run.",
+    f"{BASE_PATH}/{BASE_PATH}/{BASE_PATH}.hlsrun_cosim_summary": "Cosimulation not run.",
+    f"{BASE_PATH}/{BASE_PATH}/reports/hls_compile.rpt": "Synthesis results not found."
+}
+
+def check_report_file():
+    with open(REPORT_FILE_PATH, 'r') as file:
+        report = file.readlines()
+
+    for line in report:
+        if line.startswith('    |+ fir'):
+            columns = [column.strip() for column in line.split('|')]
+            break
+
+    dsp = int(re.search(r'\d+', columns[11]).group()) if columns[11] != '-' else 0
+    ff = int(re.search(r'\d+', columns[12]).group())
+    lut = int(re.search(r'\d+', columns[13]).group())
+    latency = int(columns[4])
+    slack = float(columns[3])
+
+    checks = {
+        "dsp check": dsp <= MAX_DSP,
+        "ff check": ff <= MAX_FF,
+        "lut check": lut <= MAX_LUT,
+        "latency check": latency <= MAX_LATENCY,
+        "slack check": slack >= 0
+    }
+
+    return checks
+
+def main():
+    file_check_results = {path: Path(path).is_file() for path in file_paths.keys()}
+
+    for key, present in file_check_results.items():
+        if not present:
+            print(f"Error: {file_paths[key]}")
+
+    file_check_passed = all(file_check_results.values())
+    report_checks_passed = False
+
+    if file_check_passed:
+        report_checks = check_report_file()
+        report_checks_passed = all(report_checks.values())
+
+        for check, passed in report_checks.items():
+            if not passed:
+                print(f"{check} failed")
+
+    success = file_check_passed and report_checks_passed
+
+    if success:
+        sys.exit(0)
+    else:
+        sys.exit(1)
+
+if __name__ == "__main__":
+    main()
+
