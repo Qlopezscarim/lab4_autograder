@@ -39,6 +39,12 @@ def check_report_file():
     latency = int(columns[4])
     slack = float(columns[3])
 
+    print("DSP: " + dsp)
+    print("ff: " + ff)
+    print("lut: " + lut)
+    print("latency: " + latency)
+
+
     checks = {
         "dsp check": dsp <= MAX_DSP,
         "ff check": ff <= MAX_FF,
