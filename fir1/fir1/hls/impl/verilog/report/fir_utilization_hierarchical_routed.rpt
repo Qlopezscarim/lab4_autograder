@@ -1,0 +1,98 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Thu Feb 13 19:43:21 2025
+| Host         : ece-lnx-4511c running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
+| Command      : report_utilization -hierarchical -hierarchical_depth 5 -file ./report/fir_utilization_hierarchical_routed.rpt
+| Design       : bd_0_wrapper
+| Device       : xczu48dr-ffvg1517-2-e
+| Speed File   : -2
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++---------------------------------------------------+------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------+------------+
+|                      Instance                     |                           Module                           | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | URAM | DSP Blocks |
++---------------------------------------------------+------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------+------------+
+| bd_0_wrapper                                      |                                                      (top) |       2978 |       2801 |       0 |  177 | 5519 |      0 |      0 |    0 |         50 |
+|   bd_0_i                                          |                                                       bd_0 |       2978 |       2801 |       0 |  177 | 5519 |      0 |      0 |    0 |         50 |
+|     hls_inst                                      |                                            bd_0_hls_inst_0 |       2978 |       2801 |       0 |  177 | 5519 |      0 |      0 |    0 |         50 |
+|       (hls_inst)                                  |                                            bd_0_hls_inst_0 |          0 |          0 |       0 |    0 |    0 |      0 |      0 |    0 |          0 |
+|       inst                                        |                                        bd_0_hls_inst_0_fir |       2978 |       2801 |       0 |  177 | 5519 |      0 |      0 |    0 |         50 |
+|         (inst)                                    |                                        bd_0_hls_inst_0_fir |        148 |          1 |       0 |  147 | 1126 |      0 |      0 |    0 |          0 |
+|         control_s_axi_U                           |                          bd_0_hls_inst_0_fir_control_s_axi |         46 |         46 |       0 |    0 |   28 |      0 |      0 |    0 |          0 |
+|         fadd_32ns_32ns_32_8_full_dsp_1_U1         |         bd_0_hls_inst_0_fir_fadd_32ns_32ns_32_8_full_dsp_1 |        137 |        134 |       0 |    3 |  245 |      0 |      0 |    0 |          2 |
+|           (fadd_32ns_32ns_32_8_full_dsp_1_U1)     |         bd_0_hls_inst_0_fir_fadd_32ns_32ns_32_8_full_dsp_1 |         16 |         16 |       0 |    0 |   66 |      0 |      0 |    0 |          0 |
+|           fir_fadd_32ns_32ns_32_8_full_dsp_1_ip_u | bd_0_hls_inst_0_fir_fadd_32ns_32ns_32_8_full_dsp_1_ip_1016 |        121 |        118 |       0 |    3 |  179 |      0 |      0 |    0 |          2 |
+|         fadd_32ns_32ns_32_8_full_dsp_1_U10        |       bd_0_hls_inst_0_fir_fadd_32ns_32ns_32_8_full_dsp_1_0 |        195 |        192 |       0 |    3 |  311 |      0 |      0 |    0 |          2 |
+|           (fadd_32ns_32ns_32_8_full_dsp_1_U10)    |       bd_0_hls_inst_0_fir_fadd_32ns_32ns_32_8_full_dsp_1_0 |         16 |         16 |       0 |    0 |   96 |      0 |      0 |    0 |          0 |
+|           fir_fadd_32ns_32ns_32_8_full_dsp_1_ip_u |  bd_0_hls_inst_0_fir_fadd_32ns_32ns_32_8_full_dsp_1_ip_939 |        179 |        176 |       0 |    3 |  215 |      0 |      0 |    0 |          2 |
+|         fadd_32ns_32ns_32_8_full_dsp_1_U2         |       bd_0_hls_inst_0_fir_fadd_32ns_32ns_32_8_full_dsp_1_1 |        195 |        192 |       0 |    3 |  311 |      0 |      0 |    0 |          2 |
+|           (fadd_32ns_32ns_32_8_full_dsp_1_U2)     |       bd_0_hls_inst_0_fir_fadd_32ns_32ns_32_8_full_dsp_1_1 |         16 |         16 |       0 |    0 |   96 |      0 |      0 |    0 |          0 |
+|           fir_fadd_32ns_32ns_32_8_full_dsp_1_ip_u |  bd_0_hls_inst_0_fir_fadd_32ns_32ns_32_8_full_dsp_1_ip_862 |        179 |        176 |       0 |    3 |  215 |      0 |      0 |    0 |          2 |
+|         fadd_32ns_32ns_32_8_full_dsp_1_U3         |       bd_0_hls_inst_0_fir_fadd_32ns_32ns_32_8_full_dsp_1_2 |        195 |        192 |       0 |    3 |  311 |      0 |      0 |    0 |          2 |
+|           (fadd_32ns_32ns_32_8_full_dsp_1_U3)     |       bd_0_hls_inst_0_fir_fadd_32ns_32ns_32_8_full_dsp_1_2 |         16 |         16 |       0 |    0 |   96 |      0 |      0 |    0 |          0 |
+|           fir_fadd_32ns_32ns_32_8_full_dsp_1_ip_u |  bd_0_hls_inst_0_fir_fadd_32ns_32ns_32_8_full_dsp_1_ip_785 |        179 |        176 |       0 |    3 |  215 |      0 |      0 |    0 |          2 |
+|         fadd_32ns_32ns_32_8_full_dsp_1_U4         |       bd_0_hls_inst_0_fir_fadd_32ns_32ns_32_8_full_dsp_1_3 |        195 |        192 |       0 |    3 |  311 |      0 |      0 |    0 |          2 |
+|           (fadd_32ns_32ns_32_8_full_dsp_1_U4)     |       bd_0_hls_inst_0_fir_fadd_32ns_32ns_32_8_full_dsp_1_3 |         16 |         16 |       0 |    0 |   96 |      0 |      0 |    0 |          0 |
+|           fir_fadd_32ns_32ns_32_8_full_dsp_1_ip_u |  bd_0_hls_inst_0_fir_fadd_32ns_32ns_32_8_full_dsp_1_ip_708 |        179 |        176 |       0 |    3 |  215 |      0 |      0 |    0 |          2 |
+|         fadd_32ns_32ns_32_8_full_dsp_1_U5         |       bd_0_hls_inst_0_fir_fadd_32ns_32ns_32_8_full_dsp_1_4 |        195 |        192 |       0 |    3 |  311 |      0 |      0 |    0 |          2 |
+|           (fadd_32ns_32ns_32_8_full_dsp_1_U5)     |       bd_0_hls_inst_0_fir_fadd_32ns_32ns_32_8_full_dsp_1_4 |         16 |         16 |       0 |    0 |   96 |      0 |      0 |    0 |          0 |
+|           fir_fadd_32ns_32ns_32_8_full_dsp_1_ip_u |  bd_0_hls_inst_0_fir_fadd_32ns_32ns_32_8_full_dsp_1_ip_631 |        179 |        176 |       0 |    3 |  215 |      0 |      0 |    0 |          2 |
+|         fadd_32ns_32ns_32_8_full_dsp_1_U6         |       bd_0_hls_inst_0_fir_fadd_32ns_32ns_32_8_full_dsp_1_5 |        195 |        192 |       0 |    3 |  311 |      0 |      0 |    0 |          2 |
+|           (fadd_32ns_32ns_32_8_full_dsp_1_U6)     |       bd_0_hls_inst_0_fir_fadd_32ns_32ns_32_8_full_dsp_1_5 |         16 |         16 |       0 |    0 |   96 |      0 |      0 |    0 |          0 |
+|           fir_fadd_32ns_32ns_32_8_full_dsp_1_ip_u |  bd_0_hls_inst_0_fir_fadd_32ns_32ns_32_8_full_dsp_1_ip_554 |        179 |        176 |       0 |    3 |  215 |      0 |      0 |    0 |          2 |
+|         fadd_32ns_32ns_32_8_full_dsp_1_U7         |       bd_0_hls_inst_0_fir_fadd_32ns_32ns_32_8_full_dsp_1_6 |        195 |        192 |       0 |    3 |  311 |      0 |      0 |    0 |          2 |
+|           (fadd_32ns_32ns_32_8_full_dsp_1_U7)     |       bd_0_hls_inst_0_fir_fadd_32ns_32ns_32_8_full_dsp_1_6 |         16 |         16 |       0 |    0 |   96 |      0 |      0 |    0 |          0 |
+|           fir_fadd_32ns_32ns_32_8_full_dsp_1_ip_u |  bd_0_hls_inst_0_fir_fadd_32ns_32ns_32_8_full_dsp_1_ip_477 |        179 |        176 |       0 |    3 |  215 |      0 |      0 |    0 |          2 |
+|         fadd_32ns_32ns_32_8_full_dsp_1_U8         |       bd_0_hls_inst_0_fir_fadd_32ns_32ns_32_8_full_dsp_1_7 |        195 |        192 |       0 |    3 |  311 |      0 |      0 |    0 |          2 |
+|           (fadd_32ns_32ns_32_8_full_dsp_1_U8)     |       bd_0_hls_inst_0_fir_fadd_32ns_32ns_32_8_full_dsp_1_7 |         16 |         16 |       0 |    0 |   96 |      0 |      0 |    0 |          0 |
+|           fir_fadd_32ns_32ns_32_8_full_dsp_1_ip_u |  bd_0_hls_inst_0_fir_fadd_32ns_32ns_32_8_full_dsp_1_ip_400 |        179 |        176 |       0 |    3 |  215 |      0 |      0 |    0 |          2 |
+|         fadd_32ns_32ns_32_8_full_dsp_1_U9         |       bd_0_hls_inst_0_fir_fadd_32ns_32ns_32_8_full_dsp_1_8 |        195 |        192 |       0 |    3 |  311 |      0 |      0 |    0 |          2 |
+|           (fadd_32ns_32ns_32_8_full_dsp_1_U9)     |       bd_0_hls_inst_0_fir_fadd_32ns_32ns_32_8_full_dsp_1_8 |         16 |         16 |       0 |    0 |   96 |      0 |      0 |    0 |          0 |
+|           fir_fadd_32ns_32ns_32_8_full_dsp_1_ip_u |      bd_0_hls_inst_0_fir_fadd_32ns_32ns_32_8_full_dsp_1_ip |        179 |        176 |       0 |    3 |  215 |      0 |      0 |    0 |          2 |
+|         flow_control_loop_delay_pipe_U            |           bd_0_hls_inst_0_fir_flow_control_loop_delay_pipe |         18 |         18 |       0 |    0 |    2 |      0 |      0 |    0 |          0 |
+|         fmul_32ns_32ns_32_5_max_dsp_1_U11         |          bd_0_hls_inst_0_fir_fmul_32ns_32ns_32_5_max_dsp_1 |         78 |         78 |       0 |    0 |  119 |      0 |      0 |    0 |          3 |
+|           (fmul_32ns_32ns_32_5_max_dsp_1_U11)     |          bd_0_hls_inst_0_fir_fmul_32ns_32ns_32_5_max_dsp_1 |         16 |         16 |       0 |    0 |   65 |      0 |      0 |    0 |          0 |
+|           fir_fmul_32ns_32ns_32_5_max_dsp_1_ip_u  |   bd_0_hls_inst_0_fir_fmul_32ns_32ns_32_5_max_dsp_1_ip_334 |         62 |         62 |       0 |    0 |   54 |      0 |      0 |    0 |          3 |
+|         fmul_32ns_32ns_32_5_max_dsp_1_U12         |        bd_0_hls_inst_0_fir_fmul_32ns_32ns_32_5_max_dsp_1_9 |         80 |         80 |       0 |    0 |  118 |      0 |      0 |    0 |          3 |
+|           (fmul_32ns_32ns_32_5_max_dsp_1_U12)     |        bd_0_hls_inst_0_fir_fmul_32ns_32ns_32_5_max_dsp_1_9 |         16 |         16 |       0 |    0 |   64 |      0 |      0 |    0 |          0 |
+|           fir_fmul_32ns_32ns_32_5_max_dsp_1_ip_u  |   bd_0_hls_inst_0_fir_fmul_32ns_32ns_32_5_max_dsp_1_ip_296 |         64 |         64 |       0 |    0 |   54 |      0 |      0 |    0 |          3 |
+|         fmul_32ns_32ns_32_5_max_dsp_1_U13         |       bd_0_hls_inst_0_fir_fmul_32ns_32ns_32_5_max_dsp_1_10 |         79 |         79 |       0 |    0 |  118 |      0 |      0 |    0 |          3 |
+|           (fmul_32ns_32ns_32_5_max_dsp_1_U13)     |       bd_0_hls_inst_0_fir_fmul_32ns_32ns_32_5_max_dsp_1_10 |         16 |         16 |       0 |    0 |   64 |      0 |      0 |    0 |          0 |
+|           fir_fmul_32ns_32ns_32_5_max_dsp_1_ip_u  |   bd_0_hls_inst_0_fir_fmul_32ns_32ns_32_5_max_dsp_1_ip_258 |         63 |         63 |       0 |    0 |   54 |      0 |      0 |    0 |          3 |
+|         fmul_32ns_32ns_32_5_max_dsp_1_U14         |       bd_0_hls_inst_0_fir_fmul_32ns_32ns_32_5_max_dsp_1_11 |         79 |         79 |       0 |    0 |  118 |      0 |      0 |    0 |          3 |
+|           (fmul_32ns_32ns_32_5_max_dsp_1_U14)     |       bd_0_hls_inst_0_fir_fmul_32ns_32ns_32_5_max_dsp_1_11 |         16 |         16 |       0 |    0 |   64 |      0 |      0 |    0 |          0 |
+|           fir_fmul_32ns_32ns_32_5_max_dsp_1_ip_u  |   bd_0_hls_inst_0_fir_fmul_32ns_32ns_32_5_max_dsp_1_ip_220 |         63 |         63 |       0 |    0 |   54 |      0 |      0 |    0 |          3 |
+|         fmul_32ns_32ns_32_5_max_dsp_1_U15         |       bd_0_hls_inst_0_fir_fmul_32ns_32ns_32_5_max_dsp_1_12 |         78 |         78 |       0 |    0 |  118 |      0 |      0 |    0 |          3 |
+|           (fmul_32ns_32ns_32_5_max_dsp_1_U15)     |       bd_0_hls_inst_0_fir_fmul_32ns_32ns_32_5_max_dsp_1_12 |         16 |         16 |       0 |    0 |   64 |      0 |      0 |    0 |          0 |
+|           fir_fmul_32ns_32ns_32_5_max_dsp_1_ip_u  |   bd_0_hls_inst_0_fir_fmul_32ns_32ns_32_5_max_dsp_1_ip_182 |         62 |         62 |       0 |    0 |   54 |      0 |      0 |    0 |          3 |
+|         fmul_32ns_32ns_32_5_max_dsp_1_U16         |       bd_0_hls_inst_0_fir_fmul_32ns_32ns_32_5_max_dsp_1_13 |         79 |         79 |       0 |    0 |  118 |      0 |      0 |    0 |          3 |
+|           (fmul_32ns_32ns_32_5_max_dsp_1_U16)     |       bd_0_hls_inst_0_fir_fmul_32ns_32ns_32_5_max_dsp_1_13 |         16 |         16 |       0 |    0 |   64 |      0 |      0 |    0 |          0 |
+|           fir_fmul_32ns_32ns_32_5_max_dsp_1_ip_u  |   bd_0_hls_inst_0_fir_fmul_32ns_32ns_32_5_max_dsp_1_ip_144 |         63 |         63 |       0 |    0 |   54 |      0 |      0 |    0 |          3 |
+|         fmul_32ns_32ns_32_5_max_dsp_1_U17         |       bd_0_hls_inst_0_fir_fmul_32ns_32ns_32_5_max_dsp_1_14 |         80 |         80 |       0 |    0 |  118 |      0 |      0 |    0 |          3 |
+|           (fmul_32ns_32ns_32_5_max_dsp_1_U17)     |       bd_0_hls_inst_0_fir_fmul_32ns_32ns_32_5_max_dsp_1_14 |         16 |         16 |       0 |    0 |   64 |      0 |      0 |    0 |          0 |
+|           fir_fmul_32ns_32ns_32_5_max_dsp_1_ip_u  |   bd_0_hls_inst_0_fir_fmul_32ns_32ns_32_5_max_dsp_1_ip_106 |         64 |         64 |       0 |    0 |   54 |      0 |      0 |    0 |          3 |
+|         fmul_32ns_32ns_32_5_max_dsp_1_U18         |       bd_0_hls_inst_0_fir_fmul_32ns_32ns_32_5_max_dsp_1_15 |         78 |         78 |       0 |    0 |  118 |      0 |      0 |    0 |          3 |
+|           (fmul_32ns_32ns_32_5_max_dsp_1_U18)     |       bd_0_hls_inst_0_fir_fmul_32ns_32ns_32_5_max_dsp_1_15 |         16 |         16 |       0 |    0 |   64 |      0 |      0 |    0 |          0 |
+|           fir_fmul_32ns_32ns_32_5_max_dsp_1_ip_u  |    bd_0_hls_inst_0_fir_fmul_32ns_32ns_32_5_max_dsp_1_ip_68 |         62 |         62 |       0 |    0 |   54 |      0 |      0 |    0 |          3 |
+|         fmul_32ns_32ns_32_5_max_dsp_1_U19         |       bd_0_hls_inst_0_fir_fmul_32ns_32ns_32_5_max_dsp_1_16 |         79 |         79 |       0 |    0 |  118 |      0 |      0 |    0 |          3 |
+|           (fmul_32ns_32ns_32_5_max_dsp_1_U19)     |       bd_0_hls_inst_0_fir_fmul_32ns_32ns_32_5_max_dsp_1_16 |         16 |         16 |       0 |    0 |   64 |      0 |      0 |    0 |          0 |
+|           fir_fmul_32ns_32ns_32_5_max_dsp_1_ip_u  |    bd_0_hls_inst_0_fir_fmul_32ns_32ns_32_5_max_dsp_1_ip_30 |         63 |         63 |       0 |    0 |   54 |      0 |      0 |    0 |          3 |
+|         fmul_32ns_32ns_32_5_max_dsp_1_U20         |       bd_0_hls_inst_0_fir_fmul_32ns_32ns_32_5_max_dsp_1_17 |         80 |         80 |       0 |    0 |  118 |      0 |      0 |    0 |          3 |
+|           (fmul_32ns_32ns_32_5_max_dsp_1_U20)     |       bd_0_hls_inst_0_fir_fmul_32ns_32ns_32_5_max_dsp_1_17 |         16 |         16 |       0 |    0 |   64 |      0 |      0 |    0 |          0 |
+|           fir_fmul_32ns_32ns_32_5_max_dsp_1_ip_u  |       bd_0_hls_inst_0_fir_fmul_32ns_32ns_32_5_max_dsp_1_ip |         64 |         64 |       0 |    0 |   54 |      0 |      0 |    0 |          3 |
+|         regslice_both_in_r_U                      |                          bd_0_hls_inst_0_fir_regslice_both |         37 |         37 |       0 |    0 |   69 |      0 |      0 |    0 |          0 |
+|         regslice_both_out_r_U                     |                       bd_0_hls_inst_0_fir_regslice_both_18 |         50 |         50 |       0 |    0 |   69 |      0 |      0 |    0 |          0 |
++---------------------------------------------------+------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------+------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

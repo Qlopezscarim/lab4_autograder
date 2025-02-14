@@ -1,0 +1,197 @@
+<profile>
+<RunData>
+  <RUN_TYPE>impl</RUN_TYPE>
+  <VIVADO_VERSION>v.2024.2</VIVADO_VERSION>
+  <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+</RunData>
+<TimingReport>
+  <TargetClockPeriod>5.000</TargetClockPeriod>
+  <AchievedClockPeriod>3.872</AchievedClockPeriod>
+  <CLOCK_NAME>ap_clk</CLOCK_NAME>
+  <CP_FINAL>3.872</CP_FINAL>
+  <CP_ROUTE>3.872</CP_ROUTE>
+  <CP_SYNTH>2.062</CP_SYNTH>
+  <CP_TARGET>5.000</CP_TARGET>
+  <SLACK_FINAL>1.128</SLACK_FINAL>
+  <SLACK_ROUTE>1.128</SLACK_ROUTE>
+  <SLACK_SYNTH>2.938</SLACK_SYNTH>
+  <TIMING_MET>TRUE</TIMING_MET>
+  <TNS_FINAL>0.000</TNS_FINAL>
+  <TNS_ROUTE>0.000</TNS_ROUTE>
+  <TNS_SYNTH>0.000</TNS_SYNTH>
+  <WNS_FINAL>1.128</WNS_FINAL>
+  <WNS_ROUTE>1.128</WNS_ROUTE>
+  <WNS_SYNTH>2.938</WNS_SYNTH>
+</TimingReport>
+<AreaReport>
+  <Resources>
+    <BRAM>0</BRAM>
+    <CLB>800</CLB>
+    <DSP>50</DSP>
+    <FF>5519</FF>
+    <LATCH>0</LATCH>
+    <LUT>2978</LUT>
+    <SRL>177</SRL>
+    <URAM>0</URAM>
+  </Resources>
+  <AvailableResources>
+    <BRAM>2160</BRAM>
+    <CLB>53160</CLB>
+    <DSP>4272</DSP>
+    <FF>850560</FF>
+    <LUT>425280</LUT>
+    <URAM>80</URAM>
+  </AvailableResources>
+</AreaReport>
+<RtlModules>
+  <RtlModule CELL="inst" DEPTH="0" FILE_NAME="bd_0_hls_inst_0.v" ORIG_REF_NAME="fir" TOP_CELL="bd_0_i/hls_inst/inst">
+    <SubModules count="24">control_s_axi_U fadd_32ns_32ns_32_8_full_dsp_1_U1 fadd_32ns_32ns_32_8_full_dsp_1_U10 fadd_32ns_32ns_32_8_full_dsp_1_U2 fadd_32ns_32ns_32_8_full_dsp_1_U3 fadd_32ns_32ns_32_8_full_dsp_1_U4 fadd_32ns_32ns_32_8_full_dsp_1_U5 fadd_32ns_32ns_32_8_full_dsp_1_U6 fadd_32ns_32ns_32_8_full_dsp_1_U7 fadd_32ns_32ns_32_8_full_dsp_1_U8 fadd_32ns_32ns_32_8_full_dsp_1_U9 flow_control_loop_delay_pipe_U fmul_32ns_32ns_32_5_max_dsp_1_U11 fmul_32ns_32ns_32_5_max_dsp_1_U12 fmul_32ns_32ns_32_5_max_dsp_1_U13 fmul_32ns_32ns_32_5_max_dsp_1_U14 fmul_32ns_32ns_32_5_max_dsp_1_U15 fmul_32ns_32ns_32_5_max_dsp_1_U16 fmul_32ns_32ns_32_5_max_dsp_1_U17 fmul_32ns_32ns_32_5_max_dsp_1_U18 fmul_32ns_32ns_32_5_max_dsp_1_U19 fmul_32ns_32ns_32_5_max_dsp_1_U20 regslice_both_in_r_U regslice_both_out_r_U</SubModules>
+    <Resources DSP="50" FF="5519" LUT="2978" LogicLUT="2801" SRL="177"/>
+    <LocalResources FF="1126" LUT="148" LogicLUT="1" SRL="147"/>
+  </RtlModule>
+  <RtlModule CELL="inst/control_s_axi_U" DEPTH="1" FILE_NAME="fir.v" ORIG_REF_NAME="fir_control_s_axi">
+    <Resources FF="28" LUT="46" LogicLUT="46"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fadd_32ns_32ns_32_8_full_dsp_1_U1" DEPTH="1" FILE_NAME="fir.v" ORIG_REF_NAME="fir_fadd_32ns_32ns_32_8_full_dsp_1">
+    <Resources DSP="2" FF="245" LUT="137" LogicLUT="134" SRL="3"/>
+    <LocalResources FF="66" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fadd_32ns_32ns_32_8_full_dsp_1_U10" DEPTH="1" FILE_NAME="fir.v" ORIG_REF_NAME="fir_fadd_32ns_32ns_32_8_full_dsp_1">
+    <Resources DSP="2" FF="311" LUT="195" LogicLUT="192" SRL="3"/>
+    <LocalResources FF="96" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fadd_32ns_32ns_32_8_full_dsp_1_U2" DEPTH="1" FILE_NAME="fir.v" ORIG_REF_NAME="fir_fadd_32ns_32ns_32_8_full_dsp_1">
+    <Resources DSP="2" FF="311" LUT="195" LogicLUT="192" SRL="3"/>
+    <LocalResources FF="96" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fadd_32ns_32ns_32_8_full_dsp_1_U3" DEPTH="1" FILE_NAME="fir.v" ORIG_REF_NAME="fir_fadd_32ns_32ns_32_8_full_dsp_1">
+    <Resources DSP="2" FF="311" LUT="195" LogicLUT="192" SRL="3"/>
+    <LocalResources FF="96" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fadd_32ns_32ns_32_8_full_dsp_1_U4" DEPTH="1" FILE_NAME="fir.v" ORIG_REF_NAME="fir_fadd_32ns_32ns_32_8_full_dsp_1">
+    <Resources DSP="2" FF="311" LUT="195" LogicLUT="192" SRL="3"/>
+    <LocalResources FF="96" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fadd_32ns_32ns_32_8_full_dsp_1_U5" DEPTH="1" FILE_NAME="fir.v" ORIG_REF_NAME="fir_fadd_32ns_32ns_32_8_full_dsp_1">
+    <Resources DSP="2" FF="311" LUT="195" LogicLUT="192" SRL="3"/>
+    <LocalResources FF="96" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fadd_32ns_32ns_32_8_full_dsp_1_U6" DEPTH="1" FILE_NAME="fir.v" ORIG_REF_NAME="fir_fadd_32ns_32ns_32_8_full_dsp_1">
+    <Resources DSP="2" FF="311" LUT="195" LogicLUT="192" SRL="3"/>
+    <LocalResources FF="96" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fadd_32ns_32ns_32_8_full_dsp_1_U7" DEPTH="1" FILE_NAME="fir.v" ORIG_REF_NAME="fir_fadd_32ns_32ns_32_8_full_dsp_1">
+    <Resources DSP="2" FF="311" LUT="195" LogicLUT="192" SRL="3"/>
+    <LocalResources FF="96" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fadd_32ns_32ns_32_8_full_dsp_1_U8" DEPTH="1" FILE_NAME="fir.v" ORIG_REF_NAME="fir_fadd_32ns_32ns_32_8_full_dsp_1">
+    <Resources DSP="2" FF="311" LUT="195" LogicLUT="192" SRL="3"/>
+    <LocalResources FF="96" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fadd_32ns_32ns_32_8_full_dsp_1_U9" DEPTH="1" FILE_NAME="fir.v" ORIG_REF_NAME="fir_fadd_32ns_32ns_32_8_full_dsp_1">
+    <Resources DSP="2" FF="311" LUT="195" LogicLUT="192" SRL="3"/>
+    <LocalResources FF="96" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/flow_control_loop_delay_pipe_U" DEPTH="1" FILE_NAME="fir.v" ORIG_REF_NAME="fir_flow_control_loop_delay_pipe">
+    <Resources FF="2" LUT="18" LogicLUT="18"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_5_max_dsp_1_U11" DEPTH="1" FILE_NAME="fir.v" ORIG_REF_NAME="fir_fmul_32ns_32ns_32_5_max_dsp_1">
+    <Resources DSP="3" FF="119" LUT="78" LogicLUT="78"/>
+    <LocalResources FF="65" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_5_max_dsp_1_U12" DEPTH="1" FILE_NAME="fir.v" ORIG_REF_NAME="fir_fmul_32ns_32ns_32_5_max_dsp_1">
+    <Resources DSP="3" FF="118" LUT="80" LogicLUT="80"/>
+    <LocalResources FF="64" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_5_max_dsp_1_U13" DEPTH="1" FILE_NAME="fir.v" ORIG_REF_NAME="fir_fmul_32ns_32ns_32_5_max_dsp_1">
+    <Resources DSP="3" FF="118" LUT="79" LogicLUT="79"/>
+    <LocalResources FF="64" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_5_max_dsp_1_U14" DEPTH="1" FILE_NAME="fir.v" ORIG_REF_NAME="fir_fmul_32ns_32ns_32_5_max_dsp_1">
+    <Resources DSP="3" FF="118" LUT="79" LogicLUT="79"/>
+    <LocalResources FF="64" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_5_max_dsp_1_U15" DEPTH="1" FILE_NAME="fir.v" ORIG_REF_NAME="fir_fmul_32ns_32ns_32_5_max_dsp_1">
+    <Resources DSP="3" FF="118" LUT="78" LogicLUT="78"/>
+    <LocalResources FF="64" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_5_max_dsp_1_U16" DEPTH="1" FILE_NAME="fir.v" ORIG_REF_NAME="fir_fmul_32ns_32ns_32_5_max_dsp_1">
+    <Resources DSP="3" FF="118" LUT="79" LogicLUT="79"/>
+    <LocalResources FF="64" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_5_max_dsp_1_U17" DEPTH="1" FILE_NAME="fir.v" ORIG_REF_NAME="fir_fmul_32ns_32ns_32_5_max_dsp_1">
+    <Resources DSP="3" FF="118" LUT="80" LogicLUT="80"/>
+    <LocalResources FF="64" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_5_max_dsp_1_U18" DEPTH="1" FILE_NAME="fir.v" ORIG_REF_NAME="fir_fmul_32ns_32ns_32_5_max_dsp_1">
+    <Resources DSP="3" FF="118" LUT="78" LogicLUT="78"/>
+    <LocalResources FF="64" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_5_max_dsp_1_U19" DEPTH="1" FILE_NAME="fir.v" ORIG_REF_NAME="fir_fmul_32ns_32ns_32_5_max_dsp_1">
+    <Resources DSP="3" FF="118" LUT="79" LogicLUT="79"/>
+    <LocalResources FF="64" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_5_max_dsp_1_U20" DEPTH="1" FILE_NAME="fir.v" ORIG_REF_NAME="fir_fmul_32ns_32ns_32_5_max_dsp_1">
+    <Resources DSP="3" FF="118" LUT="80" LogicLUT="80"/>
+    <LocalResources FF="64" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/regslice_both_in_r_U" DEPTH="1" FILE_NAME="fir.v" ORIG_REF_NAME="fir_regslice_both">
+    <Resources FF="69" LUT="37" LogicLUT="37"/>
+  </RtlModule>
+  <RtlModule CELL="inst/regslice_both_out_r_U" DEPTH="1" FILE_NAME="fir.v" ORIG_REF_NAME="fir_regslice_both">
+    <Resources FF="69" LUT="50" LogicLUT="50"/>
+  </RtlModule>
+</RtlModules>
+<TimingPaths>
+  <TPATH DATAPATH_DELAY="3.670" DATAPATH_LOGIC_DELAY="0.479" DATAPATH_NET_DELAY="3.191" ENDPOINT_PIN="bd_0_i/hls_inst/inst/reg_14_reg_469_pp0_iter23_reg_reg[16]_srl8/CE" LOGIC_LEVELS="4" MAX_FANOUT="1792" SLACK="1.128" STARTPOINT_PIN="bd_0_i/hls_inst/inst/ap_done_reg_reg/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/ap_done_reg_reg" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="fir.v" LINE_NUMBER="1031"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/regslice_both_out_r_U/ce_r_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT5" FILE_NAME="fir_control_s_axi.v" LINE_NUMBER="119"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/regslice_both_out_r_U/ce_r_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT5" FILE_NAME="fir_control_s_axi.v" LINE_NUMBER="119"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/regslice_both_out_r_U/ce_r_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT2" FILE_NAME="fir_control_s_axi.v" LINE_NUMBER="119"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/regslice_both_out_r_U/ce_r_i_1_bufg_place" PRIMITIVE_TYPE="CLOCK.BUFFER.BUFGCE" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/reg_14_reg_469_pp0_iter23_reg_reg[16]_srl8" PRIMITIVE_TYPE="CLB.SRL.SRL16E" FILE_NAME="fir.v" LINE_NUMBER="854"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="3.670" DATAPATH_LOGIC_DELAY="0.479" DATAPATH_NET_DELAY="3.191" ENDPOINT_PIN="bd_0_i/hls_inst/inst/reg_14_reg_469_pp0_iter23_reg_reg[17]_srl8/CE" LOGIC_LEVELS="4" MAX_FANOUT="1792" SLACK="1.128" STARTPOINT_PIN="bd_0_i/hls_inst/inst/ap_done_reg_reg/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/ap_done_reg_reg" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="fir.v" LINE_NUMBER="1031"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/regslice_both_out_r_U/ce_r_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT5" FILE_NAME="fir_control_s_axi.v" LINE_NUMBER="119"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/regslice_both_out_r_U/ce_r_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT5" FILE_NAME="fir_control_s_axi.v" LINE_NUMBER="119"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/regslice_both_out_r_U/ce_r_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT2" FILE_NAME="fir_control_s_axi.v" LINE_NUMBER="119"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/regslice_both_out_r_U/ce_r_i_1_bufg_place" PRIMITIVE_TYPE="CLOCK.BUFFER.BUFGCE" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/reg_14_reg_469_pp0_iter23_reg_reg[17]_srl8" PRIMITIVE_TYPE="CLB.SRL.SRL16E" FILE_NAME="fir.v" LINE_NUMBER="854"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="3.670" DATAPATH_LOGIC_DELAY="0.479" DATAPATH_NET_DELAY="3.191" ENDPOINT_PIN="bd_0_i/hls_inst/inst/reg_14_reg_469_pp0_iter23_reg_reg[18]_srl8/CE" LOGIC_LEVELS="4" MAX_FANOUT="1792" SLACK="1.128" STARTPOINT_PIN="bd_0_i/hls_inst/inst/ap_done_reg_reg/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/ap_done_reg_reg" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="fir.v" LINE_NUMBER="1031"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/regslice_both_out_r_U/ce_r_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT5" FILE_NAME="fir_control_s_axi.v" LINE_NUMBER="119"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/regslice_both_out_r_U/ce_r_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT5" FILE_NAME="fir_control_s_axi.v" LINE_NUMBER="119"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/regslice_both_out_r_U/ce_r_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT2" FILE_NAME="fir_control_s_axi.v" LINE_NUMBER="119"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/regslice_both_out_r_U/ce_r_i_1_bufg_place" PRIMITIVE_TYPE="CLOCK.BUFFER.BUFGCE" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/reg_14_reg_469_pp0_iter23_reg_reg[18]_srl8" PRIMITIVE_TYPE="CLB.SRL.SRL16E" FILE_NAME="fir.v" LINE_NUMBER="854"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="3.670" DATAPATH_LOGIC_DELAY="0.479" DATAPATH_NET_DELAY="3.191" ENDPOINT_PIN="bd_0_i/hls_inst/inst/reg_14_reg_469_pp0_iter23_reg_reg[19]_srl8/CE" LOGIC_LEVELS="4" MAX_FANOUT="1792" SLACK="1.128" STARTPOINT_PIN="bd_0_i/hls_inst/inst/ap_done_reg_reg/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/ap_done_reg_reg" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="fir.v" LINE_NUMBER="1031"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/regslice_both_out_r_U/ce_r_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT5" FILE_NAME="fir_control_s_axi.v" LINE_NUMBER="119"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/regslice_both_out_r_U/ce_r_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT5" FILE_NAME="fir_control_s_axi.v" LINE_NUMBER="119"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/regslice_both_out_r_U/ce_r_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT2" FILE_NAME="fir_control_s_axi.v" LINE_NUMBER="119"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/regslice_both_out_r_U/ce_r_i_1_bufg_place" PRIMITIVE_TYPE="CLOCK.BUFFER.BUFGCE" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/reg_14_reg_469_pp0_iter23_reg_reg[19]_srl8" PRIMITIVE_TYPE="CLB.SRL.SRL16E" FILE_NAME="fir.v" LINE_NUMBER="854"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="3.670" DATAPATH_LOGIC_DELAY="0.479" DATAPATH_NET_DELAY="3.191" ENDPOINT_PIN="bd_0_i/hls_inst/inst/reg_14_reg_469_pp0_iter23_reg_reg[20]_srl8/CE" LOGIC_LEVELS="4" MAX_FANOUT="1792" SLACK="1.128" STARTPOINT_PIN="bd_0_i/hls_inst/inst/ap_done_reg_reg/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/ap_done_reg_reg" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="fir.v" LINE_NUMBER="1031"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/regslice_both_out_r_U/ce_r_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT5" FILE_NAME="fir_control_s_axi.v" LINE_NUMBER="119"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/regslice_both_out_r_U/ce_r_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT5" FILE_NAME="fir_control_s_axi.v" LINE_NUMBER="119"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/regslice_both_out_r_U/ce_r_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT2" FILE_NAME="fir_control_s_axi.v" LINE_NUMBER="119"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/regslice_both_out_r_U/ce_r_i_1_bufg_place" PRIMITIVE_TYPE="CLOCK.BUFFER.BUFGCE" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/reg_14_reg_469_pp0_iter23_reg_reg[20]_srl8" PRIMITIVE_TYPE="CLB.SRL.SRL16E" FILE_NAME="fir.v" LINE_NUMBER="854"/>
+  </TPATH>
+</TimingPaths>
+<VivadoReportFiles>
+  <ReportFile TYPE="design_analysis" PATH="verilog/report/fir_design_analysis_routed.rpt"/>
+  <ReportFile TYPE="failfast" PATH="verilog/report/fir_failfast_routed.rpt"/>
+  <ReportFile TYPE="power" PATH="verilog/report/fir_power_routed.rpt"/>
+  <ReportFile TYPE="status" PATH="verilog/report/fir_status_routed.rpt"/>
+  <ReportFile TYPE="timing" PATH="verilog/report/fir_timing_routed.rpt"/>
+  <ReportFile TYPE="timing_paths" PATH="verilog/report/fir_timing_paths_routed.rpt"/>
+  <ReportFile TYPE="utilization" PATH="verilog/report/fir_utilization_routed.rpt"/>
+  <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/fir_utilization_hierarchical_routed.rpt"/>
+</VivadoReportFiles>
+</profile>

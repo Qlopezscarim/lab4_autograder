@@ -1,0 +1,334 @@
+================================================================
+== Vivado Place & Route Results
+================================================================
++ General Information:
+    * Date:            Thu Feb 13 19:43:54 EST 2025
+    * Version:         2024.2 (Build 5238294 on Nov  8 2024)
+    * Project:         fir1
+    * Solution:        hls (Vitis Kernel Flow Target)
+    * Product family:  zynquplusRFSOC
+    * Target device:   xczu48dr-ffvg1517-2-e
+
+
+================================================================
+== Run Constraints & Options
+================================================================
++ Design Constraints & Options:
+    * Place & Route target clock:  5 ns
+    * C-Synthesis target clock:    5 ns
+    * C-Synthesis uncertainty:     27%
+
++ RTL Synthesis Options:
+    * config_export -vivado_synth_strategy:     default
+    * config_export -vivado_synth_design_args:  -directive sdx_optimization_effort_high
+
++ Place & Route Options:
+    * config_export -vivado_impl_strategy:  default
+    * config_export -vivado_phys_opt:       auto
+
++ Reporting Options:
+    * config_export -vivado_report_level:      2
+    * config_export -vivado_max_timing_paths:  10
+
+
+================================================================
+== Place & Route Resource Summary
+================================================================
+LUT:              2978
+FF:               5519
+DSP:              50
+BRAM:             0
+URAM:             0
+SRL:              177
+
+
+================================================================
+== Place & Route Timing Summary
+================================================================
+* Timing was met
++----------------+-------------+
+| Timing         | Period (ns) |
++----------------+-------------+
+| Target         | 5.000       |
+| Post-Synthesis | 2.062       |
+| Post-Route     | 3.872       |
++----------------+-------------+
+
+
+================================================================
+== Place & Route Resources
+================================================================
++--------------------------------------+------+------+-----+------+------+-----+--------+------+---------+----------+--------+
+| Name                                 | LUT  | FF   | DSP | BRAM | URAM | SRL | Pragma | Impl | Latency | Variable | Source |
++--------------------------------------+------+------+-----+------+------+-----+--------+------+---------+----------+--------+
+| inst                                 | 2978 | 5519 | 50  |      |      |     |        |      |         |          |        |
+|   (inst)                             | 148  | 1126 |     |      |      |     |        |      |         |          |        |
+|   control_s_axi_U                    | 46   | 28   |     |      |      |     |        |      |         |          |        |
+|   fadd_32ns_32ns_32_8_full_dsp_1_U1  | 137  | 245  | 2   |      |      |     |        |      |         |          |        |
+|   fadd_32ns_32ns_32_8_full_dsp_1_U10 | 195  | 311  | 2   |      |      |     |        |      |         |          |        |
+|   fadd_32ns_32ns_32_8_full_dsp_1_U2  | 195  | 311  | 2   |      |      |     |        |      |         |          |        |
+|   fadd_32ns_32ns_32_8_full_dsp_1_U3  | 195  | 311  | 2   |      |      |     |        |      |         |          |        |
+|   fadd_32ns_32ns_32_8_full_dsp_1_U4  | 195  | 311  | 2   |      |      |     |        |      |         |          |        |
+|   fadd_32ns_32ns_32_8_full_dsp_1_U5  | 195  | 311  | 2   |      |      |     |        |      |         |          |        |
+|   fadd_32ns_32ns_32_8_full_dsp_1_U6  | 195  | 311  | 2   |      |      |     |        |      |         |          |        |
+|   fadd_32ns_32ns_32_8_full_dsp_1_U7  | 195  | 311  | 2   |      |      |     |        |      |         |          |        |
+|   fadd_32ns_32ns_32_8_full_dsp_1_U8  | 195  | 311  | 2   |      |      |     |        |      |         |          |        |
+|   fadd_32ns_32ns_32_8_full_dsp_1_U9  | 195  | 311  | 2   |      |      |     |        |      |         |          |        |
+|   flow_control_loop_delay_pipe_U     | 18   | 2    |     |      |      |     |        |      |         |          |        |
+|   fmul_32ns_32ns_32_5_max_dsp_1_U11  | 78   | 119  | 3   |      |      |     |        |      |         |          |        |
+|   fmul_32ns_32ns_32_5_max_dsp_1_U12  | 80   | 118  | 3   |      |      |     |        |      |         |          |        |
+|   fmul_32ns_32ns_32_5_max_dsp_1_U13  | 79   | 118  | 3   |      |      |     |        |      |         |          |        |
+|   fmul_32ns_32ns_32_5_max_dsp_1_U14  | 79   | 118  | 3   |      |      |     |        |      |         |          |        |
+|   fmul_32ns_32ns_32_5_max_dsp_1_U15  | 78   | 118  | 3   |      |      |     |        |      |         |          |        |
+|   fmul_32ns_32ns_32_5_max_dsp_1_U16  | 79   | 118  | 3   |      |      |     |        |      |         |          |        |
+|   fmul_32ns_32ns_32_5_max_dsp_1_U17  | 80   | 118  | 3   |      |      |     |        |      |         |          |        |
+|   fmul_32ns_32ns_32_5_max_dsp_1_U18  | 78   | 118  | 3   |      |      |     |        |      |         |          |        |
+|   fmul_32ns_32ns_32_5_max_dsp_1_U19  | 79   | 118  | 3   |      |      |     |        |      |         |          |        |
+|   fmul_32ns_32ns_32_5_max_dsp_1_U20  | 80   | 118  | 3   |      |      |     |        |      |         |          |        |
+|   regslice_both_in_r_U               | 37   | 69   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_out_r_U              | 50   | 69   |     |      |      |     |        |      |         |          |        |
++--------------------------------------+------+------+-----+------+------+-----+--------+------+---------+----------+--------+
+
+
+================================================================
+== Place & Route Fail Fast
+================================================================
++-----------------------------------------------------------+-----------+--------+--------+
+| Criteria                                                  | Guideline | Actual | Status |
++-----------------------------------------------------------+-----------+--------+--------+
+| LUT                                                       | 70%       | 0.70%  | OK     |
+| FD                                                        | 50%       | 0.65%  | OK     |
+| LUTRAM+SRL                                                | 25%       | 0.08%  | OK     |
+| CARRY8                                                    | 25%       | 0.24%  | OK     |
+| MUXF7                                                     | 15%       | 0.00%  | OK     |
+| DSP                                                       | 80%       | 1.17%  | OK     |
+| RAMB/FIFO                                                 | 80%       | 0.00%  | OK     |
+| URAM                                                      | 80%       | 0.00%  | OK     |
+| DSP+RAMB+URAM (Avg)                                       | 70%       | 1.17%  | OK     |
+| BUFGCE* + BUFGCTRL                                        | 24        | 0      | OK     |
+| DONT_TOUCH (cells/nets)                                   | 0         | 0      | OK     |
+| MARK_DEBUG (nets)                                         | 0         | 0      | OK     |
+| Control Sets                                              | 7974      | 52     | OK     |
+| Average Fanout for modules > 100k cells                   | 4         | 1.00   | OK     |
+| Max Average Fanout for modules > 100k cells               | 4         | 0      | OK     |
+| Non-FD high fanout nets > 10k loads                       | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| TIMING-6 (No common primary clock between related clocks) | 0         | 0      | OK     |
+| TIMING-7 (No common node between related clocks)          | 0         | 0      | OK     |
+| TIMING-8 (No common period between related clocks)        | 0         | 0      | OK     |
+| TIMING-14 (LUT on the clock tree)                         | 0         | 0      | OK     |
+| TIMING-35 (No common node in paths with the same clock)   | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| Number of paths above max LUT budgeting (0.300ns)         | 0         | 0      | OK     |
+| Number of paths above max Net budgeting (0.208ns)         | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+
+
+================================================================
+== Place & Route Timing Paths
+================================================================
+* Timing was met
++-------+-------+-------------------+-----------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path  | SLACK | STARTPOINT PIN    | ENDPOINT PIN                                  | LOGIC LEVELS | MAX FANOUT | DATAPATH DELAY | DATAPATH LOGIC | DATAPATH NET |
+|       |       |                   |                                               |              |            |                |          DELAY |        DELAY |
++-------+-------+-------------------+-----------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path1 | 1.128 | ap_done_reg_reg/C | reg_14_reg_469_pp0_iter23_reg_reg[16]_srl8/CE |            4 |       1792 |          3.670 |          0.479 |        3.191 |
+| Path2 | 1.128 | ap_done_reg_reg/C | reg_14_reg_469_pp0_iter23_reg_reg[17]_srl8/CE |            4 |       1792 |          3.670 |          0.479 |        3.191 |
+| Path3 | 1.128 | ap_done_reg_reg/C | reg_14_reg_469_pp0_iter23_reg_reg[18]_srl8/CE |            4 |       1792 |          3.670 |          0.479 |        3.191 |
+| Path4 | 1.128 | ap_done_reg_reg/C | reg_14_reg_469_pp0_iter23_reg_reg[19]_srl8/CE |            4 |       1792 |          3.670 |          0.479 |        3.191 |
+| Path5 | 1.128 | ap_done_reg_reg/C | reg_14_reg_469_pp0_iter23_reg_reg[20]_srl8/CE |            4 |       1792 |          3.670 |          0.479 |        3.191 |
++-------+-------+-------------------+-----------------------------------------------+--------------+------------+----------------+----------------+--------------+
+
+    +--------------------------------------------+---------------------+
+    | Path1 Cells                                | Primitive Type      |
+    +--------------------------------------------+---------------------+
+    | ap_done_reg_reg                            | REGISTER.SDR.FDRE   |
+    | regslice_both_out_r_U/ce_r_i_3             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_2             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_1             | CLB.LUT.LUT2        |
+    | regslice_both_out_r_U/ce_r_i_1_bufg_place  | CLOCK.BUFFER.BUFGCE |
+    | reg_14_reg_469_pp0_iter23_reg_reg[16]_srl8 | CLB.SRL.SRL16E      |
+    | ap_done_reg_reg                            | REGISTER.SDR.FDRE   |
+    | regslice_both_out_r_U/ce_r_i_3             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_2             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_1             | CLB.LUT.LUT2        |
+    | regslice_both_out_r_U/ce_r_i_1_bufg_place  | CLOCK.BUFFER.BUFGCE |
+    | reg_14_reg_469_pp0_iter23_reg_reg[17]_srl8 | CLB.SRL.SRL16E      |
+    | ap_done_reg_reg                            | REGISTER.SDR.FDRE   |
+    | regslice_both_out_r_U/ce_r_i_3             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_2             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_1             | CLB.LUT.LUT2        |
+    | regslice_both_out_r_U/ce_r_i_1_bufg_place  | CLOCK.BUFFER.BUFGCE |
+    | reg_14_reg_469_pp0_iter23_reg_reg[18]_srl8 | CLB.SRL.SRL16E      |
+    | ap_done_reg_reg                            | REGISTER.SDR.FDRE   |
+    | regslice_both_out_r_U/ce_r_i_3             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_2             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_1             | CLB.LUT.LUT2        |
+    | regslice_both_out_r_U/ce_r_i_1_bufg_place  | CLOCK.BUFFER.BUFGCE |
+    | reg_14_reg_469_pp0_iter23_reg_reg[19]_srl8 | CLB.SRL.SRL16E      |
+    | ap_done_reg_reg                            | REGISTER.SDR.FDRE   |
+    | regslice_both_out_r_U/ce_r_i_3             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_2             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_1             | CLB.LUT.LUT2        |
+    | regslice_both_out_r_U/ce_r_i_1_bufg_place  | CLOCK.BUFFER.BUFGCE |
+    | reg_14_reg_469_pp0_iter23_reg_reg[20]_srl8 | CLB.SRL.SRL16E      |
+    +--------------------------------------------+---------------------+
+
+    +--------------------------------------------+---------------------+
+    | Path2 Cells                                | Primitive Type      |
+    +--------------------------------------------+---------------------+
+    | ap_done_reg_reg                            | REGISTER.SDR.FDRE   |
+    | regslice_both_out_r_U/ce_r_i_3             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_2             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_1             | CLB.LUT.LUT2        |
+    | regslice_both_out_r_U/ce_r_i_1_bufg_place  | CLOCK.BUFFER.BUFGCE |
+    | reg_14_reg_469_pp0_iter23_reg_reg[16]_srl8 | CLB.SRL.SRL16E      |
+    | ap_done_reg_reg                            | REGISTER.SDR.FDRE   |
+    | regslice_both_out_r_U/ce_r_i_3             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_2             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_1             | CLB.LUT.LUT2        |
+    | regslice_both_out_r_U/ce_r_i_1_bufg_place  | CLOCK.BUFFER.BUFGCE |
+    | reg_14_reg_469_pp0_iter23_reg_reg[17]_srl8 | CLB.SRL.SRL16E      |
+    | ap_done_reg_reg                            | REGISTER.SDR.FDRE   |
+    | regslice_both_out_r_U/ce_r_i_3             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_2             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_1             | CLB.LUT.LUT2        |
+    | regslice_both_out_r_U/ce_r_i_1_bufg_place  | CLOCK.BUFFER.BUFGCE |
+    | reg_14_reg_469_pp0_iter23_reg_reg[18]_srl8 | CLB.SRL.SRL16E      |
+    | ap_done_reg_reg                            | REGISTER.SDR.FDRE   |
+    | regslice_both_out_r_U/ce_r_i_3             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_2             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_1             | CLB.LUT.LUT2        |
+    | regslice_both_out_r_U/ce_r_i_1_bufg_place  | CLOCK.BUFFER.BUFGCE |
+    | reg_14_reg_469_pp0_iter23_reg_reg[19]_srl8 | CLB.SRL.SRL16E      |
+    | ap_done_reg_reg                            | REGISTER.SDR.FDRE   |
+    | regslice_both_out_r_U/ce_r_i_3             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_2             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_1             | CLB.LUT.LUT2        |
+    | regslice_both_out_r_U/ce_r_i_1_bufg_place  | CLOCK.BUFFER.BUFGCE |
+    | reg_14_reg_469_pp0_iter23_reg_reg[20]_srl8 | CLB.SRL.SRL16E      |
+    +--------------------------------------------+---------------------+
+
+    +--------------------------------------------+---------------------+
+    | Path3 Cells                                | Primitive Type      |
+    +--------------------------------------------+---------------------+
+    | ap_done_reg_reg                            | REGISTER.SDR.FDRE   |
+    | regslice_both_out_r_U/ce_r_i_3             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_2             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_1             | CLB.LUT.LUT2        |
+    | regslice_both_out_r_U/ce_r_i_1_bufg_place  | CLOCK.BUFFER.BUFGCE |
+    | reg_14_reg_469_pp0_iter23_reg_reg[16]_srl8 | CLB.SRL.SRL16E      |
+    | ap_done_reg_reg                            | REGISTER.SDR.FDRE   |
+    | regslice_both_out_r_U/ce_r_i_3             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_2             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_1             | CLB.LUT.LUT2        |
+    | regslice_both_out_r_U/ce_r_i_1_bufg_place  | CLOCK.BUFFER.BUFGCE |
+    | reg_14_reg_469_pp0_iter23_reg_reg[17]_srl8 | CLB.SRL.SRL16E      |
+    | ap_done_reg_reg                            | REGISTER.SDR.FDRE   |
+    | regslice_both_out_r_U/ce_r_i_3             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_2             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_1             | CLB.LUT.LUT2        |
+    | regslice_both_out_r_U/ce_r_i_1_bufg_place  | CLOCK.BUFFER.BUFGCE |
+    | reg_14_reg_469_pp0_iter23_reg_reg[18]_srl8 | CLB.SRL.SRL16E      |
+    | ap_done_reg_reg                            | REGISTER.SDR.FDRE   |
+    | regslice_both_out_r_U/ce_r_i_3             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_2             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_1             | CLB.LUT.LUT2        |
+    | regslice_both_out_r_U/ce_r_i_1_bufg_place  | CLOCK.BUFFER.BUFGCE |
+    | reg_14_reg_469_pp0_iter23_reg_reg[19]_srl8 | CLB.SRL.SRL16E      |
+    | ap_done_reg_reg                            | REGISTER.SDR.FDRE   |
+    | regslice_both_out_r_U/ce_r_i_3             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_2             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_1             | CLB.LUT.LUT2        |
+    | regslice_both_out_r_U/ce_r_i_1_bufg_place  | CLOCK.BUFFER.BUFGCE |
+    | reg_14_reg_469_pp0_iter23_reg_reg[20]_srl8 | CLB.SRL.SRL16E      |
+    +--------------------------------------------+---------------------+
+
+    +--------------------------------------------+---------------------+
+    | Path4 Cells                                | Primitive Type      |
+    +--------------------------------------------+---------------------+
+    | ap_done_reg_reg                            | REGISTER.SDR.FDRE   |
+    | regslice_both_out_r_U/ce_r_i_3             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_2             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_1             | CLB.LUT.LUT2        |
+    | regslice_both_out_r_U/ce_r_i_1_bufg_place  | CLOCK.BUFFER.BUFGCE |
+    | reg_14_reg_469_pp0_iter23_reg_reg[16]_srl8 | CLB.SRL.SRL16E      |
+    | ap_done_reg_reg                            | REGISTER.SDR.FDRE   |
+    | regslice_both_out_r_U/ce_r_i_3             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_2             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_1             | CLB.LUT.LUT2        |
+    | regslice_both_out_r_U/ce_r_i_1_bufg_place  | CLOCK.BUFFER.BUFGCE |
+    | reg_14_reg_469_pp0_iter23_reg_reg[17]_srl8 | CLB.SRL.SRL16E      |
+    | ap_done_reg_reg                            | REGISTER.SDR.FDRE   |
+    | regslice_both_out_r_U/ce_r_i_3             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_2             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_1             | CLB.LUT.LUT2        |
+    | regslice_both_out_r_U/ce_r_i_1_bufg_place  | CLOCK.BUFFER.BUFGCE |
+    | reg_14_reg_469_pp0_iter23_reg_reg[18]_srl8 | CLB.SRL.SRL16E      |
+    | ap_done_reg_reg                            | REGISTER.SDR.FDRE   |
+    | regslice_both_out_r_U/ce_r_i_3             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_2             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_1             | CLB.LUT.LUT2        |
+    | regslice_both_out_r_U/ce_r_i_1_bufg_place  | CLOCK.BUFFER.BUFGCE |
+    | reg_14_reg_469_pp0_iter23_reg_reg[19]_srl8 | CLB.SRL.SRL16E      |
+    | ap_done_reg_reg                            | REGISTER.SDR.FDRE   |
+    | regslice_both_out_r_U/ce_r_i_3             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_2             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_1             | CLB.LUT.LUT2        |
+    | regslice_both_out_r_U/ce_r_i_1_bufg_place  | CLOCK.BUFFER.BUFGCE |
+    | reg_14_reg_469_pp0_iter23_reg_reg[20]_srl8 | CLB.SRL.SRL16E      |
+    +--------------------------------------------+---------------------+
+
+    +--------------------------------------------+---------------------+
+    | Path5 Cells                                | Primitive Type      |
+    +--------------------------------------------+---------------------+
+    | ap_done_reg_reg                            | REGISTER.SDR.FDRE   |
+    | regslice_both_out_r_U/ce_r_i_3             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_2             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_1             | CLB.LUT.LUT2        |
+    | regslice_both_out_r_U/ce_r_i_1_bufg_place  | CLOCK.BUFFER.BUFGCE |
+    | reg_14_reg_469_pp0_iter23_reg_reg[16]_srl8 | CLB.SRL.SRL16E      |
+    | ap_done_reg_reg                            | REGISTER.SDR.FDRE   |
+    | regslice_both_out_r_U/ce_r_i_3             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_2             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_1             | CLB.LUT.LUT2        |
+    | regslice_both_out_r_U/ce_r_i_1_bufg_place  | CLOCK.BUFFER.BUFGCE |
+    | reg_14_reg_469_pp0_iter23_reg_reg[17]_srl8 | CLB.SRL.SRL16E      |
+    | ap_done_reg_reg                            | REGISTER.SDR.FDRE   |
+    | regslice_both_out_r_U/ce_r_i_3             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_2             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_1             | CLB.LUT.LUT2        |
+    | regslice_both_out_r_U/ce_r_i_1_bufg_place  | CLOCK.BUFFER.BUFGCE |
+    | reg_14_reg_469_pp0_iter23_reg_reg[18]_srl8 | CLB.SRL.SRL16E      |
+    | ap_done_reg_reg                            | REGISTER.SDR.FDRE   |
+    | regslice_both_out_r_U/ce_r_i_3             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_2             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_1             | CLB.LUT.LUT2        |
+    | regslice_both_out_r_U/ce_r_i_1_bufg_place  | CLOCK.BUFFER.BUFGCE |
+    | reg_14_reg_469_pp0_iter23_reg_reg[19]_srl8 | CLB.SRL.SRL16E      |
+    | ap_done_reg_reg                            | REGISTER.SDR.FDRE   |
+    | regslice_both_out_r_U/ce_r_i_3             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_2             | CLB.LUT.LUT5        |
+    | regslice_both_out_r_U/ce_r_i_1             | CLB.LUT.LUT2        |
+    | regslice_both_out_r_U/ce_r_i_1_bufg_place  | CLOCK.BUFFER.BUFGCE |
+    | reg_14_reg_469_pp0_iter23_reg_reg[20]_srl8 | CLB.SRL.SRL16E      |
+    +--------------------------------------------+---------------------+
+
+
+================================================================
+== Place & Route Vivado Reports
+================================================================
++--------------------------+-------------------------------------------------------------+
+| Report Type              | Report Location                                             |
++--------------------------+-------------------------------------------------------------+
+| design_analysis          | impl/verilog/report/fir_design_analysis_routed.rpt          |
+| failfast                 | impl/verilog/report/fir_failfast_routed.rpt                 |
+| power                    | impl/verilog/report/fir_power_routed.rpt                    |
+| status                   | impl/verilog/report/fir_status_routed.rpt                   |
+| timing                   | impl/verilog/report/fir_timing_routed.rpt                   |
+| timing_paths             | impl/verilog/report/fir_timing_paths_routed.rpt             |
+| utilization              | impl/verilog/report/fir_utilization_routed.rpt              |
+| utilization_hierarchical | impl/verilog/report/fir_utilization_hierarchical_routed.rpt |
++--------------------------+-------------------------------------------------------------+
+
+

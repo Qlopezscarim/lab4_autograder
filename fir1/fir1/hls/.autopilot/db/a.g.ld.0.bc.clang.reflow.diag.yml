@@ -1,0 +1,121 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_fir_ir
+Args:            
+  - Callee:          'fir(float*, float*)'
+    DebugLoc:        { File: fir.cpp, Line: 5, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_fir_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: fir.cpp, Line: 9, Column: 8 }
+Function:        _Z3firPfS_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          reg
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        unknown
+  - String:          '> at '
+  - LoopLoc:         ''
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        sample_loop
+  - String:          '> at '
+  - LoopLoc:         'fir.cpp:12:15'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: fir.cpp, Line: 14, Column: 17 }
+Function:        _Z3firPfS_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        shift_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: fir.cpp, Line: 21, Column: 15 }
+Function:        _Z3firPfS_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        fir_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: fir.cpp, Line: 5, Column: 0 }
+Function:        _Z3firPfS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        shift_loop
+  - String:          ''' ('
+  - LoopLoc:         'fir.cpp:14:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fir
+  - String:          ''' completely with a factor of '
+  - Factor:          '9'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: fir.cpp, Line: 5, Column: 0 }
+Function:        _Z3firPfS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        fir_loop
+  - String:          ''' ('
+  - LoopLoc:         'fir.cpp:21:15'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fir
+  - String:          ''' completely with a factor of '
+  - Factor:          '10'
+...
+--- !Missed
+Pass:            pasta-interface-builder
+Name:            UnsupportArrayToStream
+DebugLoc:        { File: fir.cpp, Line: 5, Column: 0 }
+Function:        _Z3firPfS_
+Args:            
+  - String:          'Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '''
+  - Name:            in_r
+  - String:          ''''
+...
+--- !Missed
+Pass:            pasta-interface-builder
+Name:            UnsupportArrayToStream
+DebugLoc:        { File: fir.cpp, Line: 5, Column: 0 }
+Function:        _Z3firPfS_
+Args:            
+  - String:          'Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port '''
+  - Name:            out_r
+  - String:          ''''
+...

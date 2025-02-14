@@ -1,0 +1,7 @@
+fir_fadd_32ns_32ns_32_8_full_dsp_1
+fir_fmul_32ns_32ns_32_5_max_dsp_1
+fir_control_s_axi
+fir_regslice_both
+fir_regslice_both
+fir_flow_control_loop_delay_pipe
+fir

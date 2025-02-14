@@ -1,0 +1,246 @@
+<ENTRY>
+{
+ "thisFile": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir1/fir1/fir1.hlscompile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Feb 13 19:27:35 2025",
+ "timestampMillis": "1739492855510",
+ "buildStep": {
+  "cmdId": "2701db30-b124-4f56-92fe-1c5a4148f054",
+  "name": "v++",
+  "logFile": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir1/fir1/logs/fir1.steps.log",
+  "commandLine": "/apps/xilinx24/Vitis/2024.2/bin/unwrapped/lnx64.o/v++  -c --mode hls --config /ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir1/hls_config.cfg --work_dir fir1 ",
+  "args": [
+   "-c",
+   "--mode",
+   "hls",
+   "--config",
+   "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir1/hls_config.cfg",
+   "--work_dir",
+   "fir1"
+  ],
+  "iniFiles": [
+   {
+    "path": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir1/hls_config.cfg",
+    "content": "part=xczu48dr-ffvg1517-2-e\n\n[hls]\nflow_target=vitis\npackage.output.format=xo\npackage.output.syn=false\nclock=5\nsyn.file=/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir1/fir.cpp\nsyn.file=/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir1/fir.h\nsyn.top=fir\ntb.file=/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir1/fir_test.cpp\ncsim.code_analyzer=1"
+   }
+  ],
+  "cwd": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Feb 13 19:27:35 2025",
+ "timestampMillis": "1739492855511",
+ "status": {
+  "cmdId": "2701db30-b124-4f56-92fe-1c5a4148f054",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Thu Feb 13 19:27:44 2025",
+ "timestampMillis": "1739492864018",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "fir",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir1/fir.cpp",
+     "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir1/fir.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Feb 13 19:27:44 2025",
+ "timestampMillis": "1739492864019",
+ "buildStep": {
+  "cmdId": "edf5ae5c-f222-4962-885f-d01a2c9617df",
+  "name": "",
+  "logFile": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir1/fir1/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Feb 13 19:27:44 2025",
+ "timestampMillis": "1739492864020",
+ "status": {
+  "cmdId": "edf5ae5c-f222-4962-885f-d01a2c9617df",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Feb 13 19:27:44 2025",
+ "timestampMillis": "1739492864021",
+ "report": {
+  "path": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir1/fir1/hls/hls_data.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Feb 13 19:27:44 2025",
+ "timestampMillis": "1739492864022",
+ "report": {
+  "path": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir1/fir1/hls/syn/report/csynth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Feb 13 19:27:44 2025",
+ "timestampMillis": "1739492864023",
+ "report": {
+  "path": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir1/fir1/hls/syn/report/csynth.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Feb 13 19:27:56 2025",
+ "timestampMillis": "1739492876484",
+ "report": {
+  "path": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir1/fir1/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Feb 13 19:27:56 2025",
+ "timestampMillis": "1739492876485",
+ "report": {
+  "path": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir1/fir1/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Feb 13 19:27:56 2025",
+ "timestampMillis": "1739492876485",
+ "report": {
+  "path": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir1/fir1/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_SCHEDULE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Feb 13 19:27:56 2025",
+ "timestampMillis": "1739492876485",
+ "status": {
+  "cmdId": "edf5ae5c-f222-4962-885f-d01a2c9617df",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Feb 13 19:27:56 2025",
+ "timestampMillis": "1739492876763",
+ "status": {
+  "cmdId": "2701db30-b124-4f56-92fe-1c5a4148f054",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Feb 13 19:27:56 2025",
+ "timestampMillis": "1739492876868",
+ "report": {
+  "path": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir1/fir1/reports/v++_compile_fir1_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Feb 13 19:27:56 2025",
+ "timestampMillis": "1739492876869",
+ "report": {
+  "path": "/ecel/UFAD/qlopezscarim/Desktop/lab4_vitis/fir1/fir1/reports/.db/v++_compile_fir1_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
